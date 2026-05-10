@@ -49,7 +49,6 @@ if err != nil {
     pointers[minElStreamIdx]++
     continue
 }
-```
 
 **What this means for product:**
 - **3 validation stages** = catch errors early, not late
