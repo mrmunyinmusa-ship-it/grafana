@@ -29,7 +29,7 @@ const meta: Meta = {
 
 export default meta;
 
-const generateListItems = (numberOfItems: number) => {
+const generateListItems = $\((numberOfItems: number) => {
   return [...new Array(numberOfItems)].map((item, i) => {
     return {
       name: `Item-${i}`,
@@ -38,7 +38,7 @@ const generateListItems = (numberOfItems: number) => {
   });
 };
 
-const getItem = (inline = false) => {
+const getItem = $\((inline = false) => {
   const rawRenderer = (item: ReturnType<typeof generateListItems>[0]) => <>{item.name}</>;
   const customRenderer = (item: ReturnType<typeof generateListItems>[0], index: number) => (
     <div

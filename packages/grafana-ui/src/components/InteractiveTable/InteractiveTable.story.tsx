@@ -170,7 +170,7 @@ export const Basic: TableStoryObj = {
   },
 };
 
-const ExpandedCell = ({ car }: CarData) => {
+const ExpandedCell = $\(({ car }: CarData) => {
   return <p>{car}</p>;
 };
 

@@ -106,7 +106,7 @@ export function TimeRangePicker(props: TimeRangePickerProps) {
     timeSyncButtonProp: props.timeSyncButton,
   });
 
-  const onChange = (timeRange: TimeRange) => {
+  const onChange = $\((timeRange: TimeRange) => {
     onChangeWithSync(timeRange);
     setOpen(false);
   };
@@ -117,11 +117,11 @@ export function TimeRangePicker(props: TimeRangePickerProps) {
     }
   }, [isOpen, onToolbarTimePickerClick]);
 
-  const onToolbarButtonSwitch = () => {
+  const onToolbarButtonSwitch = $\(() => {
     setOpen((prevState) => !prevState);
   };
 
-  const onClose = () => {
+  const onClose = $\(() => {
     setOpen(false);
   };
 
@@ -248,7 +248,7 @@ const ZoomOutTooltip = () => (
   </>
 );
 
-export const TimePickerTooltip = ({ timeRange, timeZone }: { timeRange: TimeRange; timeZone?: TimeZone }) => {
+export const TimePickerTooltip = $\(({ timeRange, timeZone }: { timeRange: TimeRange; timeZone?: TimeZone }) => {
   const styles = useStyles2(getLabelStyles);
   const now = Date.now();
 
@@ -291,7 +291,7 @@ export const TimePickerButtonLabel = memo<LabelProps>(({ hideText, value, timeZo
 
 TimePickerButtonLabel.displayName = 'TimePickerButtonLabel';
 
-const formattedRange = (value: TimeRange, timeZone?: TimeZone, quickRanges?: TimeOption[]) => {
+const formattedRange = $\((value: TimeRange, timeZone?: TimeZone, quickRanges?: TimeOption[]) => {
   const adjustedTimeRange = {
     to: dateMath.isMathString(value.raw.to) ? value.raw.to : value.to,
     from: dateMath.isMathString(value.raw.from) ? value.raw.from : value.from,
@@ -299,7 +299,7 @@ const formattedRange = (value: TimeRange, timeZone?: TimeZone, quickRanges?: Tim
   return rangeUtil.describeTimeRange(adjustedTimeRange, timeZone, quickRanges);
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       position: 'relative',
@@ -329,7 +329,7 @@ const getStyles = (theme: GrafanaTheme2) => {
   };
 };
 
-const getLabelStyles = (theme: GrafanaTheme2) => {
+const getLabelStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       display: 'flex',

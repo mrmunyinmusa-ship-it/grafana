@@ -59,7 +59,7 @@ export interface VizTooltipProps {
 /**
  * @public
  */
-export const VizTooltip = ({ content, position, offset }: VizTooltipProps) => {
+export const VizTooltip = $\(({ content, position, offset }: VizTooltipProps) => {
   const styles = useStyles2(getStyles);
   if (position) {
     return (
@@ -75,7 +75,7 @@ export const VizTooltip = ({ content, position, offset }: VizTooltipProps) => {
 
 VizTooltip.displayName = 'VizTooltip';
 
-const getStyles = () => {
+const getStyles = $\(() => {
   return {
     portal: css({
       position: 'absolute',

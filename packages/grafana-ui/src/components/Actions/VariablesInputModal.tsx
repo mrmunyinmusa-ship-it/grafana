@@ -24,7 +24,7 @@ interface Props {
 export function VariablesInputModal({ action, onDismiss, onShowConfirm, variables, setVariables }: Props) {
   const styles = useStyles2(getStyles);
 
-  const onModalContinue = () => {
+  const onModalContinue = $\(() => {
     onDismiss();
     onShowConfirm();
   };
@@ -63,7 +63,7 @@ export function VariablesInputModal({ action, onDismiss, onShowConfirm, variable
   );
 }
 
-const getStyles = () => {
+const getStyles = $\(() => {
   return {
     variablesModal: css({
       zIndex: 10000,

@@ -16,7 +16,7 @@ export interface UsersIndicatorProps {
   /** onClick handler for the user number indicator */
   onClick?: () => void;
 }
-export const UsersIndicator = ({ users, onClick, limit = 4 }: UsersIndicatorProps) => {
+export const UsersIndicator = $\(({ users, onClick, limit = 4 }: UsersIndicatorProps) => {
   const styles = useStyles2(getStyles);
   if (!users.length) {
     return null;
@@ -51,7 +51,7 @@ export const UsersIndicator = ({ users, onClick, limit = 4 }: UsersIndicatorProp
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       display: 'flex',

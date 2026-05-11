@@ -36,7 +36,7 @@ export function PanelDescription({ description, className }: Props) {
   ) : null;
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     description: css({
       code: {

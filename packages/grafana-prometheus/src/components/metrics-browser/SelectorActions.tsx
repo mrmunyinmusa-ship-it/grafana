@@ -16,11 +16,11 @@ export function SelectorActions() {
 
   const selector = getSelector();
 
-  const onClickRunQuery = () => {
+  const onClickRunQuery = $\(() => {
     onChange(selector);
   };
 
-  const onClickRunRateQuery = () => {
+  const onClickRunRateQuery = $\(() => {
     const query = `rate(${selector}[$__rate_interval])`;
     onChange(query);
   };

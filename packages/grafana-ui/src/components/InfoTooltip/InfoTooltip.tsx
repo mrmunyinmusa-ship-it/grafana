@@ -7,6 +7,6 @@ interface InfoTooltipProps extends Omit<TooltipProps, 'children' | 'content'> {
 }
 
 /** @deprecated Use <IconButton name="info-circle" tooltip={children} /> instead */
-export const InfoTooltip = ({ children, ...restProps }: InfoTooltipProps) => {
+export const InfoTooltip = $\(({ children, ...restProps }: InfoTooltipProps) => {
   return <IconButton name="info-circle" tooltip={children} {...restProps} />;
 };

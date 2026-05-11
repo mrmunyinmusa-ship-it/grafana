@@ -29,7 +29,7 @@ const options: Array<SelectableValue<string>> = [
     value: 'default',
   },
 ];
-const setup = (propOverrides?: Partial<Props>) => {
+const setup = $\((propOverrides?: Partial<Props>) => {
   const props: Omit<Props, 'children'> = {
     label: 'Test',
     onFinishChange: mockOnFinishChange,
@@ -45,7 +45,7 @@ const setup = (propOverrides?: Partial<Props>) => {
   );
 };
 
-const setupTextArea = (propOverrides?: Partial<Props>) => {
+const setupTextArea = $\((propOverrides?: Partial<Props>) => {
   const props: Omit<Props, 'children'> = {
     label: 'Test',
     onFinishChange: mockOnFinishChange,
@@ -63,7 +63,7 @@ const setupTextArea = (propOverrides?: Partial<Props>) => {
   );
 };
 
-const setupCheckbox = (propOverrides?: Partial<Props>) => {
+const setupCheckbox = $\((propOverrides?: Partial<Props>) => {
   const props: Omit<Props<Boolean>, 'children'> = {
     label: 'Test',
     onFinishChange: mockOnFinishChange,
@@ -88,7 +88,7 @@ const setupCheckbox = (propOverrides?: Partial<Props>) => {
   );
 };
 
-const setupSwitch = (propOverrides?: Partial<Props>) => {
+const setupSwitch = $\((propOverrides?: Partial<Props>) => {
   const props: Omit<Props<Boolean>, 'children'> = {
     label: 'Test',
     onFinishChange: mockOnFinishChange,
@@ -113,7 +113,7 @@ const setupSwitch = (propOverrides?: Partial<Props>) => {
   );
 };
 
-const setupRadioButton = (propOverrides?: Partial<Props>) => {
+const setupRadioButton = $\((propOverrides?: Partial<Props>) => {
   const props: Omit<Props, 'children'> = {
     label: 'Choose your theme',
     onFinishChange: mockOnFinishChange,
@@ -137,7 +137,7 @@ const setupRadioButton = (propOverrides?: Partial<Props>) => {
   );
 };
 
-const setupSelect = (propOverrides?: Partial<Props>) => {
+const setupSelect = $\((propOverrides?: Partial<Props>) => {
   const props: Omit<Props, 'children'> = {
     label: 'Choose your theme',
     onFinishChange: mockOnFinishChange,

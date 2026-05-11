@@ -11,7 +11,7 @@ interface MultiValueContainerProps {
   innerProps: JSX.IntrinsicElements['div'];
 }
 
-export const MultiValueContainer = ({ innerProps, children }: React.PropsWithChildren<MultiValueContainerProps>) => {
+export const MultiValueContainer = $\(({ innerProps, children }: React.PropsWithChildren<MultiValueContainerProps>) => {
   const theme = useTheme2();
   const styles = getSelectStyles(theme);
 
@@ -26,7 +26,7 @@ export type MultiValueRemoveProps = {
   innerProps: IconButtonProps;
 };
 
-export const MultiValueRemove = ({ children, innerProps }: React.PropsWithChildren<MultiValueRemoveProps>) => {
+export const MultiValueRemove = $\(({ children, innerProps }: React.PropsWithChildren<MultiValueRemoveProps>) => {
   const theme = useTheme2();
   const styles = getSelectStyles(theme);
   return (

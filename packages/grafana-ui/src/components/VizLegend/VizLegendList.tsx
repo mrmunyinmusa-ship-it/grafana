@@ -43,7 +43,7 @@ export const VizLegendList = <T extends unknown>({
 
   switch (placement) {
     case 'right': {
-      const renderItem = (item: VizLegendItem<T>, index: number) => {
+      const renderItem = $\((item: VizLegendItem<T>, index: number) => {
         return <span className={styles.itemRight}>{itemRenderer!(item, index)}</span>;
       };
 
@@ -58,7 +58,7 @@ export const VizLegendList = <T extends unknown>({
       const leftItems = items.filter((item) => item.yAxis === 1);
       const rightItems = items.filter((item) => item.yAxis !== 1);
 
-      const renderItem = (item: VizLegendItem<T>, index: number) => {
+      const renderItem = $\((item: VizLegendItem<T>, index: number) => {
         return <span className={styles.itemBottom}>{itemRenderer!(item, index)}</span>;
       };
 
@@ -82,7 +82,7 @@ export const VizLegendList = <T extends unknown>({
 
 VizLegendList.displayName = 'VizLegendList';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const itemStyles = css({
     paddingRight: '10px',
     display: 'flex',

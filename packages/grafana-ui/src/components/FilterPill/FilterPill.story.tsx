@@ -25,7 +25,7 @@ export const Basic: StoryFn<typeof FilterPill> = (args) => {
   return <FilterPill {...args} />;
 };
 
-export const Example = () => {
+export const Example = $\(() => {
   const [selected, setSelected] = useState('Stockholm');
   const elements = ['Singapore', 'Paris', 'Stockholm', 'New York', 'London'];
 

@@ -17,7 +17,7 @@ interface DataLinkSuggestionsProps {
   onClose?: () => void;
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     list: css({
       borderBottom: `1px solid ${theme.colors.border.weak}`,
@@ -55,7 +55,7 @@ const getStyles = (theme: GrafanaTheme2) => {
   };
 };
 
-export const DataLinkSuggestions = ({ suggestions, ...otherProps }: DataLinkSuggestionsProps) => {
+export const DataLinkSuggestions = $\(({ suggestions, ...otherProps }: DataLinkSuggestionsProps) => {
   const ref = useRef(null);
 
   useClickAway(ref, () => {

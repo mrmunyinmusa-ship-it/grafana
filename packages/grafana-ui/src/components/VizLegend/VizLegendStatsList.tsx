@@ -13,7 +13,7 @@ interface Props {
 /**
  * @internal
  */
-export const VizLegendStatsList = ({ stats }: Props) => {
+export const VizLegendStatsList = $\(({ stats }: Props) => {
   const styles = useStyles2(getStyles);
 
   if (stats.length === 0) {

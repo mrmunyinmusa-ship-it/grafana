@@ -16,7 +16,7 @@ interface NamedColorsGroupProps {
   key?: string;
 }
 
-const NamedColorsGroup = ({ hue, selectedColor, onColorSelect, ...otherProps }: NamedColorsGroupProps) => {
+const NamedColorsGroup = $\(({ hue, selectedColor, onColorSelect, ...otherProps }: NamedColorsGroupProps) => {
   const label = upperFirst(hue.name);
   const styles = useStyles2(getStyles);
   const reversedShades = useMemo(() => {
@@ -44,7 +44,7 @@ const NamedColorsGroup = ({ hue, selectedColor, onColorSelect, ...otherProps }: 
 
 export default NamedColorsGroup;
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     colorRow: css({
       display: 'grid',

@@ -57,7 +57,7 @@ export const FormField = ({
 
 FormField.displayName = 'FormField';
 
-const getStyles = () => {
+const getStyles = $\(() => {
   return {
     formField: css({
       display: 'flex',

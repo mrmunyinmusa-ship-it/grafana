@@ -24,7 +24,7 @@ import { PopoverContent } from '../Tooltip/types';
 import { Column } from './types';
 import { EXPANDER_CELL_ID, getColumns } from './utils';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const rowHoverBg = theme.colors.emphasize(theme.colors.background.primary, 0.03);
 
   return {
@@ -324,7 +324,7 @@ export function InteractiveTable<TableData extends object>({
   );
 }
 
-const useUniqueId = () => {
+const useUniqueId = $\(() => {
   return useMemo(() => uniqueId('InteractiveTable'), []);
 };
 

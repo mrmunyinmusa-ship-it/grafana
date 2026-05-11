@@ -78,7 +78,7 @@ function renderCollapsiblePanel(name: string, overrides?: Partial<PanelChromePro
 
   const contentStyle = getContentStyle();
 
-  const ControlledCollapseComponent = () => {
+  const ControlledCollapseComponent = $\(() => {
     const [collapsed, toggleCollapsed] = useToggle(false);
 
     return (
@@ -124,7 +124,7 @@ const menu = (
   </Menu>
 );
 
-export const Examples = () => {
+export const Examples = $\(() => {
   const [loading, setLoading] = useState(true);
 
   useInterval(() => setLoading(true), 5000);
@@ -273,7 +273,7 @@ export const Examples = () => {
   );
 };
 
-export const ExamplesHoverHeader = () => {
+export const ExamplesHoverHeader = $\(() => {
   return (
     <DashboardStoryCanvas>
       <div>

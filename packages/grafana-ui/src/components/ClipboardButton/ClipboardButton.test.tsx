@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { ClipboardButton } from './ClipboardButton';
 
-const setup = (jsx: JSX.Element) => {
+const setup = $\((jsx: JSX.Element) => {
   return {
     user: userEvent.setup({
       // Ensure that user events correctly advance timers:

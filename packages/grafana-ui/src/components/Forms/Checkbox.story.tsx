@@ -40,7 +40,7 @@ Basic.args = {
   invalid: false,
 };
 
-export const StackedList = () => {
+export const StackedList = $\(() => {
   return (
     <div>
       <Stack direction="column" alignItems="flex-start">

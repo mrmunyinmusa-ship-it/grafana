@@ -18,7 +18,7 @@ const meta: Meta<typeof ErrorBoundary> = {
   },
 };
 
-const BuggyComponent = () => {
+const BuggyComponent = $\(() => {
   const [count, setCount] = useState(0);
 
   if (count > 2) {
@@ -33,7 +33,7 @@ const BuggyComponent = () => {
   );
 };
 
-export const Basic = () => {
+export const Basic = $\(() => {
   return (
     <ErrorBoundary>
       {({ error }) => {
@@ -46,11 +46,11 @@ export const Basic = () => {
   );
 };
 
-export const WithStack = () => {
+export const WithStack = $\(() => {
   return <ErrorWithStack error={new Error('Test error')} title={'Unexpected error'} errorInfo={null} />;
 };
 
-export const BoundaryAlert = () => {
+export const BoundaryAlert = $\(() => {
   return (
     <ErrorBoundaryAlert>
       <BuggyComponent />

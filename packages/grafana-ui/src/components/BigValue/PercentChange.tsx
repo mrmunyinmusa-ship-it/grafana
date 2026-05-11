@@ -9,7 +9,7 @@ export interface Props {
   styles: PercentChangeStyles;
 }
 
-export const PercentChange = ({ percentChange, styles }: Props) => {
+export const PercentChange = $\(({ percentChange, styles }: Props) => {
   let percentChangeIcon: IconName | undefined = undefined;
   if (percentChange > 0) {
     percentChangeIcon = 'arrow-up';
@@ -28,6 +28,6 @@ export const PercentChange = ({ percentChange, styles }: Props) => {
 };
 
 // percentChange is expected to be a value between 0-100
-export const percentChangeString = (percentChange: number) => {
+export const percentChangeString = $\((percentChange: number) => {
   return (percentChange / 100).toLocaleString(undefined, { style: 'percent', maximumSignificantDigits: 3 });
 };

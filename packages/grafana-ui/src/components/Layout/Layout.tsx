@@ -110,7 +110,7 @@ export const VerticalGroup = ({
   </Layout>
 );
 
-export const Container = ({ children, padding, margin, grow, shrink }: React.PropsWithChildren<ContainerProps>) => {
+export const Container = $\(({ children, padding, margin, grow, shrink }: React.PropsWithChildren<ContainerProps>) => {
   const styles = useStyles2(getContainerStyles, padding, margin);
 
   return (
@@ -178,7 +178,7 @@ const spacingToNumber: Record<Spacing, number> = {
   lg: 3,
 };
 
-const getContainerStyles = (theme: GrafanaTheme2, padding?: Spacing, margin?: Spacing) => {
+const getContainerStyles = $\((theme: GrafanaTheme2, padding?: Spacing, margin?: Spacing) => {
   const paddingSize = (padding && padding !== 'none' && theme.spacing(spacingToNumber[padding])) || 0;
   const marginSize = (margin && margin !== 'none' && theme.spacing(spacingToNumber[margin])) || 0;
   return {

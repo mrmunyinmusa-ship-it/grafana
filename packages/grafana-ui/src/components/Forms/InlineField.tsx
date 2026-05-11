@@ -88,7 +88,7 @@ export const InlineField = ({
 
 InlineField.displayName = 'InlineField';
 
-const getStyles = (theme: GrafanaTheme2, grow?: boolean, shrink?: boolean) => {
+const getStyles = $\((theme: GrafanaTheme2, grow?: boolean, shrink?: boolean) => {
   return {
     container: css({
       display: 'flex',

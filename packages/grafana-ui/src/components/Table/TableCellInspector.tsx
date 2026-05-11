@@ -57,7 +57,7 @@ export function TableCellInspector({ value, onDismiss, mode }: TableCellInspecto
     },
   ];
 
-  const changeTabs = () => {
+  const changeTabs = $\(() => {
     setMode(currentMode === TableCellInspectorMode.text ? TableCellInspectorMode.code : TableCellInspectorMode.text);
   };
 

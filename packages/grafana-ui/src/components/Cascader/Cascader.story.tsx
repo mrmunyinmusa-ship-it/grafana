@@ -93,7 +93,7 @@ WithDisplayAllSelectedLevels.args = {
   separator: ',',
 };
 
-export const WithOptionsStateUpdate = () => {
+export const WithOptionsStateUpdate = $\(() => {
   const [updatedOptions, setOptions] = useState<CascaderOption[]>([
     {
       label: 'Initial state option',

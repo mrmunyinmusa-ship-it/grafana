@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { PageToolbar } from './PageToolbar';
 
-const resizeWindow = (x: number, y: number) => {
+const resizeWindow = $\((x: number, y: number) => {
   global.innerWidth = x;
   global.innerHeight = y;
   global.dispatchEvent(new Event('resize'));

@@ -18,7 +18,7 @@ export const EllipsisAnimated = memo(() => {
 
 EllipsisAnimated.displayName = 'EllipsisAnimated';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     ellipsis: css({
       display: 'inline',

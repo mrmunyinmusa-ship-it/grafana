@@ -145,7 +145,7 @@ describe('Combobox', () => {
       { label: 'Default', value: val },
     ];
 
-    const ControlledCombobox = () => {
+    const ControlledCombobox = $\(() => {
       const [value, setValue] = React.useState<string | number | null>(null);
 
       return (

@@ -21,7 +21,7 @@ export function FileListItem({ file: customFile, removeFile }: FileListItemProps
   const styles = useStyles2(getStyles);
   const { file, progress, error, abortUpload, retryUpload } = customFile;
 
-  const renderRightSide = () => {
+  const renderRightSide = $\(() => {
     if (error) {
       return (
         <>

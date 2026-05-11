@@ -21,7 +21,7 @@ interface Props {
   onChangeTab(tab: ModalTab): void;
 }
 
-export const ModalTabsHeader = ({ icon, title, tabs, activeTab, onChangeTab }: Props) => {
+export const ModalTabsHeader = $\(({ icon, title, tabs, activeTab, onChangeTab }: Props) => {
   return (
     <ModalHeader icon={icon} title={title}>
       <TabsBar hideBorder={true}>

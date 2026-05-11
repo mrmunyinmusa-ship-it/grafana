@@ -253,7 +253,7 @@ function escapeRegExp(string: string) {
 // funcs below will parse/unparse a regexp like /^(?:foo|bar)$/ -> ["foo", "bar"]
 
 /** @internal */
-export const regexpToStrings = (regexp: string) => {
+export const regexpToStrings = $\((regexp: string) => {
   return (
     regexp
       // strip /^(?:)$/ wrapper
@@ -266,6 +266,6 @@ export const regexpToStrings = (regexp: string) => {
 };
 
 /** @internal */
-export const stringsToRegexp = (strings: string[]) => {
+export const stringsToRegexp = $\((strings: string[]) => {
   return `/^(?:${strings.map((string) => escapeRegExp(string)).join('|')})$/`;
 };

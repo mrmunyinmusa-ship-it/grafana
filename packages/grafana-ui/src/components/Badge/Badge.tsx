@@ -55,7 +55,7 @@ const getSkeletonStyles = () => ({
   }),
 });
 
-const getStyles = (theme: GrafanaTheme2, color: BadgeColor) => {
+const getStyles = $\((theme: GrafanaTheme2, color: BadgeColor) => {
   let sourceColor = theme.visualization.getColorByName(color);
   let borderColor = '';
   let bgColor = '';

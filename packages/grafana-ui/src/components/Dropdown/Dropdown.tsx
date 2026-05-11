@@ -67,11 +67,11 @@ export const Dropdown = React.memo(({ children, overlay, placement, offset, onVi
   const animationDuration = 150;
   const animationStyles = useStyles2(getStyles, animationDuration);
 
-  const onOverlayClicked = () => {
+  const onOverlayClicked = $\(() => {
     handleOpenChange(false);
   };
 
-  const handleKeys = (event: React.KeyboardEvent) => {
+  const handleKeys = $\((event: React.KeyboardEvent) => {
     if (event.key === 'Tab') {
       handleOpenChange(false);
     }
@@ -111,7 +111,7 @@ export const Dropdown = React.memo(({ children, overlay, placement, offset, onVi
 
 Dropdown.displayName = 'Dropdown';
 
-const getStyles = (theme: GrafanaTheme2, duration: number) => {
+const getStyles = $\((theme: GrafanaTheme2, duration: number) => {
   return {
     appear: css({
       opacity: '0',

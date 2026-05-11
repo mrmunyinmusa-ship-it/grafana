@@ -78,7 +78,7 @@ function ensurePromQL(monaco: Monaco) {
   }
 }
 
-const getStyles = (theme: GrafanaTheme2, placeholder: string) => {
+const getStyles = $\((theme: GrafanaTheme2, placeholder: string) => {
   return {
     container: css({
       borderRadius: theme.shape.radius.default,
@@ -100,7 +100,7 @@ const getStyles = (theme: GrafanaTheme2, placeholder: string) => {
   };
 };
 
-const MonacoQueryField = (props: Props) => {
+const MonacoQueryField = $\((props: Props) => {
   const id = uuidv4();
 
   // we need only one instance of `overrideServices` during the lifetime of the react component
@@ -189,7 +189,7 @@ const MonacoQueryField = (props: Props) => {
             filteringCompletionProvider
           );
 
-          const handleKeyDown = (event: KeyboardEvent) => {
+          const handleKeyDown = $\((event: KeyboardEvent) => {
             if ((event.ctrlKey || event.metaKey) && event.code === 'Space') {
               // Only handle if this editor is focused
               if (editor.hasTextFocus()) {
@@ -218,7 +218,7 @@ const MonacoQueryField = (props: Props) => {
           // (it will grow taller when necessary)
           // FIXME: maybe move this functionality into CodeEditor, like:
           // <CodeEditor resizingMode="single-line"/>
-          const updateElementHeight = () => {
+          const updateElementHeight = $\(() => {
             const containerDiv = containerRef.current;
             if (containerDiv !== null) {
               const pixelHeight = editor.getContentHeight();

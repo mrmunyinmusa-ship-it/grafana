@@ -109,7 +109,7 @@ export type AutoSizeConditionals =
 
 export type ComboboxProps<T extends string | number> = ComboboxBaseProps<T> & AutoSizeConditionals;
 
-const noop = () => {};
+const noop = $\(() => {};
 
 export const VIRTUAL_OVERSCAN_ITEMS = 4;
 

@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { DataSourceHttpSettings } from './DataSourceHttpSettings';
 import { HttpSettingsProps } from './types';
 
-const setup = (propOverrides?: object) => {
+const setup = $\((propOverrides?: object) => {
   const onChange = jest.fn();
   const props: HttpSettingsProps = {
     dataSourceConfig: {
@@ -42,7 +42,7 @@ const setup = (propOverrides?: object) => {
   return { onChange };
 };
 
-const SIGV4TestEditor = (props: { renderText: string }) => {
+const SIGV4TestEditor = $\((props: { renderText: string }) => {
   return <>{props.renderText}</>;
 };
 

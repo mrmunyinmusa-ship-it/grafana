@@ -175,7 +175,7 @@ describe('ConfirmModal', () => {
   });
 
   it('should disable the confirm button when disabled prop changes from false to true', async () => {
-    const TestComponent = () => {
+    const TestComponent = $\(() => {
       const [disabled, setDisabled] = useState(false);
 
       const handleConfirm = async () => {

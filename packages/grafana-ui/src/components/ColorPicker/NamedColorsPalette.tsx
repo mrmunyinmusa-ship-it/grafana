@@ -13,7 +13,7 @@ export interface NamedColorsPaletteProps {
   onChange: (colorName: string) => void;
 }
 
-export const NamedColorsPalette = ({ color, onChange }: NamedColorsPaletteProps) => {
+export const NamedColorsPalette = $\(({ color, onChange }: NamedColorsPaletteProps) => {
   const theme = useTheme2();
   const styles = useStyles2(getStyles);
 
@@ -43,7 +43,7 @@ export const NamedColorsPalette = ({ color, onChange }: NamedColorsPaletteProps)
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       display: 'flex',

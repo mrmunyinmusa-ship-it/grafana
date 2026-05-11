@@ -61,7 +61,7 @@ export const ConfirmButton = ({
     }
   }, [shouldRestoreFocus, showConfirm]);
 
-  const onClickButton = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const onClickButton = $\((event: React.MouseEvent<HTMLButtonElement>) => {
     if (event) {
       event.preventDefault();
     }
@@ -70,7 +70,7 @@ export const ConfirmButton = ({
     onClick?.();
   };
 
-  const onClickCancel = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const onClickCancel = $\((event: React.MouseEvent<HTMLButtonElement>) => {
     if (event) {
       event.preventDefault();
     }
@@ -79,7 +79,7 @@ export const ConfirmButton = ({
     onCancel?.();
   };
 
-  const onClickConfirm = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const onClickConfirm = $\((event: React.MouseEvent<HTMLButtonElement>) => {
     if (event) {
       event.preventDefault();
     }
@@ -125,7 +125,7 @@ export const ConfirmButton = ({
 };
 ConfirmButton.displayName = 'ConfirmButton';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       alignItems: 'center',

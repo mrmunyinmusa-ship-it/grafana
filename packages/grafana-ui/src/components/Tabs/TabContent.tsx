@@ -9,7 +9,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
 }
 
-export const TabContent = ({ children, className, ...restProps }: Props) => {
+export const TabContent = $\(({ children, className, ...restProps }: Props) => {
   const styles = useStyles2(getTabContentStyle);
 
   return (

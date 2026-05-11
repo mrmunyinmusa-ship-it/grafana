@@ -47,7 +47,7 @@ describe('SelectBase', () => {
   });
 
   it('allows the value to be unset', async () => {
-    const Test = () => {
+    const Test = $\(() => {
       const option = { value: 'test-value', label: 'Test label' };
       const [value, setValue] = useState<SelectableValue<string> | null>(option);
 

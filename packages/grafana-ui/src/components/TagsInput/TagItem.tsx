@@ -21,7 +21,7 @@ interface Props {
  * @internal
  * Only used internally by TagsInput
  * */
-export const TagItem = ({ name, disabled, onRemove, autoColors = true }: Props) => {
+export const TagItem = $\(({ name, disabled, onRemove, autoColors = true }: Props) => {
   const styles = useStyles2(getStyles);
 
   // If configured, use random colors based on name.
@@ -49,7 +49,7 @@ export const TagItem = ({ name, disabled, onRemove, autoColors = true }: Props) 
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const height = theme.spacing.gridSize * 3;
 
   return {

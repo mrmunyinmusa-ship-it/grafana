@@ -57,7 +57,7 @@ const HandleTooltip = (props: {
   );
 };
 
-const tooltipStyles = (theme: GrafanaTheme2) => {
+const tooltipStyles = $\((theme: GrafanaTheme2) => {
   return {
     tooltip: css({
       position: 'absolute',

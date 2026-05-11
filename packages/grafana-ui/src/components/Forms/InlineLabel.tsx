@@ -49,7 +49,7 @@ export const InlineLabel = ({
   );
 };
 
-export const getInlineLabelStyles = (theme: GrafanaTheme2, transparent = false, width?: number | 'auto') => {
+export const getInlineLabelStyles = $\((theme: GrafanaTheme2, transparent = false, width?: number | 'auto') => {
   return {
     label: css({
       display: 'flex',

@@ -27,7 +27,7 @@ jest.mock('uplot', () => {
   });
 });
 
-const mockData = () => {
+const mockData = $\(() => {
   const data = new MutableDataFrame();
 
   data.addField({

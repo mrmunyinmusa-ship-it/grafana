@@ -12,7 +12,7 @@ export interface SeriesColorPickerPopoverProps extends ColorPickerProps, Popover
   onToggleAxis?: () => void;
 }
 
-export const SeriesColorPickerPopover = (props: SeriesColorPickerPopoverProps) => {
+export const SeriesColorPickerPopover = $\((props: SeriesColorPickerPopoverProps) => {
   const { yaxis, onToggleAxis, color, ...colorPickerProps } = props;
   const yAxisLabel = t('grafana-ui.series-color-picker-popover.y-axis-usage', 'Use right y-axis');
   const customPickers = onToggleAxis

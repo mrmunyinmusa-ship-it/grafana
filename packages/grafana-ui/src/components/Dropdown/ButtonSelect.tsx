@@ -49,7 +49,7 @@ const ButtonSelectComponent = <T,>(props: Props<T>) => {
 
   const { getReferenceProps, getFloatingProps } = useInteractions([dismiss, click]);
 
-  const onChangeInternal = (item: SelectableValue<T>) => {
+  const onChangeInternal = $\((item: SelectableValue<T>) => {
     onChange(item);
     setIsOpen(false);
   };
@@ -103,7 +103,7 @@ ButtonSelectComponent.displayName = 'ButtonSelect';
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export const ButtonSelect = memo(ButtonSelectComponent) as typeof ButtonSelectComponent;
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     wrapper: css({
       position: 'relative',

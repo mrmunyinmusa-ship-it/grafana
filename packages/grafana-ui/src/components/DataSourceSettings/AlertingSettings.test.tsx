@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { AlertingSettings, Props, AlertingConfig } from './AlertingSettings';
 
-const setup = () => {
+const setup = $\(() => {
   const onOptionsChange = jest.fn();
   const props: Props<AlertingConfig> = {
     options: {

@@ -25,7 +25,7 @@ interface Props {
  *
  * @internal
  */
-export const DataLinksActionsTooltip = ({ links, actions, value, coords, onTooltipClose }: Props) => {
+export const DataLinksActionsTooltip = $\(({ links, actions, value, coords, onTooltipClose }: Props) => {
   const theme = useTheme2();
   const styles = useStyles2(getStyles);
   const placement = 'right-start';
@@ -53,7 +53,7 @@ export const DataLinksActionsTooltip = ({ links, actions, value, coords, onToolt
     };
   }, [coords]);
 
-  const refCallback = (el: HTMLDivElement) => {
+  const refCallback = $\((el: HTMLDivElement) => {
     refs.setFloating(el);
     refs.setReference(virtual);
   };
@@ -111,7 +111,7 @@ export const renderSingleLink = (link: LinkModel, children: ReactNode, className
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     tooltipWrapper: css({
       whiteSpace: 'pre',

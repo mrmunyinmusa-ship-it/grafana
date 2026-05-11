@@ -44,7 +44,7 @@ const SegmentFrame = ({
   </>
 );
 
-export const ArrayOptions = () => {
+export const ArrayOptions = $\(() => {
   const [value, setValue] = useState(options[0]);
   return (
     <SegmentFrame loadOptions={() => loadOptions(options)}>
@@ -65,7 +65,7 @@ const meta: Meta<typeof SegmentAsync> = {
   component: SegmentAsync,
 };
 
-export const ArrayOptionsWithPrimitiveValue = () => {
+export const ArrayOptionsWithPrimitiveValue = $\(() => {
   const [value, setValue] = useState(options[0].value);
   return (
     <SegmentFrame loadOptions={() => loadOptions(options)}>
@@ -89,7 +89,7 @@ const groupedOptions: Array<{
   { label: 'Prime', options: [2, 3, 5, 7, 11, 13].map(toOption) },
 ];
 
-export const GroupedArrayOptions = () => {
+export const GroupedArrayOptions = $\(() => {
   const [value, setValue] = useState(groupedOptions[0].options[0]);
   return (
     <SegmentFrame loadOptions={() => loadOptions(groupedOptions)}>
@@ -105,7 +105,7 @@ export const GroupedArrayOptions = () => {
   );
 };
 
-export const CustomOptionsAllowed = () => {
+export const CustomOptionsAllowed = $\(() => {
   const [value, setValue] = useState(groupedOptions[0].options[0]);
   return (
     <SegmentFrame loadOptions={() => loadOptions(groupedOptions)}>
@@ -126,7 +126,7 @@ const CustomLabelComponent = ({ value }: { value: unknown }) => (
   <div className="gf-form-label">custom({String(value)})</div>
 );
 
-export const CustomLabel = () => {
+export const CustomLabel = $\(() => {
   const [value, setValue] = useState(groupedOptions[0].options[0].value);
   return (
     <SegmentFrame loadOptions={() => loadOptions(groupedOptions)}>
@@ -142,8 +142,8 @@ export const CustomLabel = () => {
   );
 };
 
-export const CustomStateMessageHandler = () => {
-  const stateToTextFunction = (state: AsyncState<Array<SelectableValue<string>>>) => {
+export const CustomStateMessageHandler = $\(() => {
+  const stateToTextFunction = $\((state: AsyncState<Array<SelectableValue<string>>>) => {
     if (state.loading) {
       return "You're going too fast for me, please wait...";
     }
@@ -199,7 +199,7 @@ export const CustomStateMessageHandler = () => {
   );
 };
 
-export const HtmlAttributes = () => {
+export const HtmlAttributes = $\(() => {
   const [value, setValue] = useState(options[0]);
   return (
     <SegmentFrame loadOptions={() => loadOptions(options)}>

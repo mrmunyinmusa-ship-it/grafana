@@ -96,7 +96,7 @@ export const VizTooltipRow = ({
     }
   };
 
-  const fallbackCopyToClipboard = (text: string, type: LabelValueTypes) => {
+  const fallbackCopyToClipboard = $\((text: string, type: LabelValueTypes) => {
     // Use a fallback method for browsers/contexts that don't support the Clipboard API.
     const textarea = document.createElement('textarea');
     labelRef.current?.appendChild(textarea);
@@ -116,7 +116,7 @@ export const VizTooltipRow = ({
     textarea.remove();
   };
 
-  const onMouseEnterLabel = (event: React.MouseEvent<HTMLDivElement>) => {
+  const onMouseEnterLabel = $\((event: React.MouseEvent<HTMLDivElement>) => {
     if (event.currentTarget.offsetWidth < event.currentTarget.scrollWidth) {
       setShowLabelTooltip(true);
     }

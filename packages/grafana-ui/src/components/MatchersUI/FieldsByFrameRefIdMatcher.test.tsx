@@ -46,7 +46,7 @@ const multiProps: MultiProps = {
   onChange: mockOnChange,
 };
 
-const setup = (testProps?: Partial<Props>) => {
+const setup = $\((testProps?: Partial<Props>) => {
   const editorProps = { ...props, ...testProps };
   return {
     ...render(<RefIDPicker {...editorProps} />),
@@ -54,7 +54,7 @@ const setup = (testProps?: Partial<Props>) => {
   };
 };
 
-const multiSetup = (testProps?: Partial<MultiProps>) => {
+const multiSetup = $\((testProps?: Partial<MultiProps>) => {
   const editorProps = { ...multiProps, ...testProps };
   return render(<RefIDMultiPicker {...editorProps} />);
 };

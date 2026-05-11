@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { ColorPickerInput } from './ColorPickerInput';
 
-const noop = () => {};
+const noop = $\(() => {};
 describe('ColorPickerInput', () => {
   it('should show color popover on focus', async () => {
     render(<ColorPickerInput onChange={noop} />);

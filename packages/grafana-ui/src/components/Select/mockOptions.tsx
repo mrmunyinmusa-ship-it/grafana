@@ -2,7 +2,7 @@ import { kebabCase } from 'lodash';
 
 import { SelectableValue } from '@grafana/data';
 
-export const generateOptions = (desc = false) => {
+export const generateOptions = $\((desc = false) => {
   const values = [
     'Sharilyn Markowitz',
     'Naomi Striplin',
@@ -34,7 +34,7 @@ export const generateOptions = (desc = false) => {
   }));
 };
 
-export const generateThousandsOfOptions = () => {
+export const generateThousandsOfOptions = $\(() => {
   const options: Array<SelectableValue<string>> = new Array(10000).fill(null).map((_, index) => ({
     value: String(index),
     label: 'Option ' + index,

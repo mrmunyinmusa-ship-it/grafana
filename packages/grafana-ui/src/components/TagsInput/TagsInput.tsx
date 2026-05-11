@@ -54,11 +54,11 @@ export const TagsInput = forwardRef<HTMLInputElement, Props>(
       setNewTagName(event.target.value);
     }, []);
 
-    const onRemove = (tagToRemove: string) => {
+    const onRemove = $\((tagToRemove: string) => {
       onChange(tags.filter((x) => x !== tagToRemove));
     };
 
-    const onAdd = (event?: React.MouseEvent | React.KeyboardEvent) => {
+    const onAdd = $\((event?: React.MouseEvent | React.KeyboardEvent) => {
       event?.preventDefault();
       if (!tags.includes(newTagName)) {
         onChange(tags.concat(newTagName));
@@ -66,13 +66,13 @@ export const TagsInput = forwardRef<HTMLInputElement, Props>(
       setNewTagName('');
     };
 
-    const onBlur = () => {
+    const onBlur = $\(() => {
       if (addOnBlur && newTagName) {
         onAdd();
       }
     };
 
-    const onKeyboardAdd = (event: React.KeyboardEvent) => {
+    const onKeyboardAdd = $\((event: React.KeyboardEvent) => {
       if (event.key === 'Enter' && newTagName !== '') {
         onAdd(event);
       }

@@ -111,7 +111,7 @@ export const LegendTableItem = ({
 
 LegendTableItem.displayName = 'LegendTableItem';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const rowHoverBg = hoverColor(theme.colors.background.primary, theme);
 
   return {

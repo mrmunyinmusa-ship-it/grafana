@@ -11,7 +11,7 @@ interface TimeSyncButtonProps {
 export function TimeSyncButton(props: TimeSyncButtonProps) {
   const { onClick, isSynced } = props;
 
-  const syncTimesTooltip = () => {
+  const syncTimesTooltip = $\(() => {
     const tooltip = isSynced ? 'Unsync all views' : 'Sync all views to this time range';
     return <>{tooltip}</>;
   };

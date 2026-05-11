@@ -15,7 +15,7 @@ export interface FilterPillProps {
   icon?: IconName;
 }
 
-export const FilterPill = ({ label, selected, onClick, icon = 'check' }: FilterPillProps) => {
+export const FilterPill = $\(({ label, selected, onClick, icon = 'check' }: FilterPillProps) => {
   const styles = useStyles2(getStyles);
   const clearButton = useStyles2(clearButtonStyles);
   return (
@@ -26,7 +26,7 @@ export const FilterPill = ({ label, selected, onClick, icon = 'check' }: FilterP
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     wrapper: css({
       background: theme.colors.background.secondary,

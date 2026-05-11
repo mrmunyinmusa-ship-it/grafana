@@ -39,7 +39,7 @@ export function getWeekStart(override?: string): WeekStart {
   return 'monday';
 }
 
-export const WeekStartPicker = (props: Props) => {
+export const WeekStartPicker = $\((props: Props) => {
   const { onChange, width, autoFocus = false, onBlur, value, disabled = false, inputId } = props;
   const weekStarts: ComboboxOption[] = useMemo(
     () => [

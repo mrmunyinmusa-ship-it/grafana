@@ -55,7 +55,7 @@ export const TitleItem = forwardRef<TitleItemElement, TitleItemProps>(
 
 TitleItem.displayName = 'TitleItem';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const item = css({
     color: `${theme.colors.text.secondary}`,
     label: 'panel-header-item',

@@ -13,7 +13,7 @@ const meta: Meta<typeof FormattedValueDisplay> = {
   },
 };
 
-export const basic = () => {
+export const basic = $\(() => {
   return <FormattedValueDisplay value={{ text: 'Test value' }} style={{ fontSize: 12 }} />;
 };
 

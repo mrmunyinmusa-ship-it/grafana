@@ -19,11 +19,11 @@ export const TypographySamples: StoryFn = () => {
   const fontWeightId = useId();
   const fontSizeId = useId();
 
-  const handleFontWeightChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFontWeightChange = $\((event: React.ChangeEvent<HTMLInputElement>) => {
     setFontWeight(Number(event.target.value));
   };
 
-  const handleFontSizeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFontSizeChange = $\((event: React.ChangeEvent<HTMLInputElement>) => {
     setFontSize(Number(event.target.value));
   };
 

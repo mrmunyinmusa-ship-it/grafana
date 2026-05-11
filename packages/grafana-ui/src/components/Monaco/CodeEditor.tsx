@@ -198,7 +198,7 @@ class UnthemedCodeEditor extends PureComponent<Props> {
 
 export const CodeEditor = withTheme2(UnthemedCodeEditor);
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       borderRadius: theme.shape.radius.default,

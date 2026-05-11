@@ -29,7 +29,7 @@ const TagComponent = forwardRef<HTMLElement, Props>(({ name, onClick, icon, clas
   const theme = useTheme2();
   const styles = getTagStyles(theme, name, colorIndex);
 
-  const onTagClick = (event: React.MouseEvent<HTMLElement>) => {
+  const onTagClick = $\((event: React.MouseEvent<HTMLElement>) => {
     event.preventDefault();
     event.stopPropagation();
 
@@ -65,7 +65,7 @@ const getSkeletonStyles = () => ({
   }),
 });
 
-const getTagStyles = (theme: GrafanaTheme2, name: string, colorIndex?: number) => {
+const getTagStyles = $\((theme: GrafanaTheme2, name: string, colorIndex?: number) => {
   let colors;
   if (colorIndex === undefined) {
     colors = getTagColorsFromName(name);

@@ -24,7 +24,7 @@ export const Basic: StoryFn<typeof TagsInput> = (props) => {
   return <TagsInput {...props} tags={tags} onChange={setTags} />;
 };
 
-export const WithManyTags = () => {
+export const WithManyTags = $\(() => {
   const [tags, setTags] = useState<string[]>(['dashboard', 'prod', 'server', 'frontend', 'game', 'kubernetes']);
   return (
     <StoryExample name="With many tags">

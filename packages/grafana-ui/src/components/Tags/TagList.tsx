@@ -82,7 +82,7 @@ const getSkeletonStyles = (theme: GrafanaTheme2) => ({
   }),
 });
 
-const getStyles = (theme: GrafanaTheme2, isTruncated: boolean) => {
+const getStyles = $\((theme: GrafanaTheme2, isTruncated: boolean) => {
   return {
     wrapper: css({
       position: 'relative',

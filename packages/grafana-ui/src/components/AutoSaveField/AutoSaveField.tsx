@@ -124,7 +124,7 @@ export function AutoSaveField<T = string>(props: Props<T>) {
 
 AutoSaveField.displayName = 'AutoSaveField';
 
-const getStyles = () => {
+const getStyles = $\(() => {
   return {
     widthFitContent: css({
       width: 'fit-content',

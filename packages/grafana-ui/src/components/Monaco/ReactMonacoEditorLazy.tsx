@@ -16,7 +16,7 @@ import type { ReactMonacoEditorProps } from './types';
  * @internal
  * Experimental export
  **/
-export const ReactMonacoEditorLazy = (props: ReactMonacoEditorProps) => {
+export const ReactMonacoEditorLazy = $\((props: ReactMonacoEditorProps) => {
   const styles = useStyles2(getStyles);
   const { loading, error, dependency } = useAsyncDependency(
     import(/* webpackChunkName: "react-monaco-editor" */ './ReactMonacoEditor')
@@ -53,7 +53,7 @@ export const ReactMonacoEditorLazy = (props: ReactMonacoEditorProps) => {
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       marginBottom: 'unset',

@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import MonacoQueryField from './MonacoQueryField';
 import { Props } from './MonacoQueryFieldProps';
 
-export const MonacoQueryFieldLazy = (props: Props) => {
+export const MonacoQueryFieldLazy = $\((props: Props) => {
   return (
     <Suspense fallback={null}>
       <MonacoQueryField {...props} />

@@ -12,7 +12,7 @@ export interface CallToActionCardProps {
 }
 
 /** @deprecated Use <EmptyState variant="call-to-action" /> instead */
-export const CallToActionCard = ({ message, callToActionElement, footer, className }: CallToActionCardProps) => {
+export const CallToActionCard = $\(({ message, callToActionElement, footer, className }: CallToActionCardProps) => {
   const css = useStyles2(getStyles);
 
   return (

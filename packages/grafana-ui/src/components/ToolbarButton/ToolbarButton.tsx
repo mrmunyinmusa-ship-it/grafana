@@ -126,7 +126,7 @@ function renderIcon(icon: IconName | React.ReactNode, iconSize?: IconSize) {
   return icon;
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const primaryVariant = getPropertiesForVariant(theme, 'primary', 'solid');
   const destructiveVariant = getPropertiesForVariant(theme, 'destructive', 'solid');
 

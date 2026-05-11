@@ -136,7 +136,7 @@ function MeasureRender({ children, id }: { children: React.ReactNode; id: string
   );
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     main: css(getStylesObjectMain(theme)),
     large: css({
@@ -151,7 +151,7 @@ const getStyles = (theme: GrafanaTheme2) => {
   };
 };
 
-const getStylesObjects = (theme: GrafanaTheme2) => {
+const getStylesObjects = $\((theme: GrafanaTheme2) => {
   return {
     main: getStylesObjectMain(theme),
     large: {

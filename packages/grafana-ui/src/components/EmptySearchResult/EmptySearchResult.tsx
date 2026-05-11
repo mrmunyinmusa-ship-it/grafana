@@ -9,12 +9,12 @@ export interface Props {
 }
 
 /** @deprecated Use <EmptyState variant="not-found" /> instead */
-const EmptySearchResult = ({ children }: Props) => {
+const EmptySearchResult = $\(({ children }: Props) => {
   const styles = useStyles2(getStyles);
   return <div className={styles.container}>{children}</div>;
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       borderLeft: `3px solid ${theme.colors.info.main}`,

@@ -103,7 +103,7 @@ export const IconButton = React.forwardRef<HTMLButtonElement, Props>((props, ref
 
 IconButton.displayName = 'IconButton';
 
-const getStyles = (theme: GrafanaTheme2, size: IconSize, variant: IconButtonVariant) => {
+const getStyles = $\((theme: GrafanaTheme2, size: IconSize, variant: IconButtonVariant) => {
   // overall size of the IconButton on hover
   // theme.spacing.gridSize originates from 2*4px for padding and letting the IconSize generally decide on the hoverSize
   const hoverSize = getSvgSize(size) + theme.spacing.gridSize;

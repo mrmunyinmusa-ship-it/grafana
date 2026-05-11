@@ -63,7 +63,7 @@ export function PortalContainer() {
   );
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     grafanaPortalContainer: css({
       position: 'fixed',

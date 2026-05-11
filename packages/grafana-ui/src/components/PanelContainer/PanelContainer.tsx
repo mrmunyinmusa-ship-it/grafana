@@ -9,7 +9,7 @@ type Props = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 // TODO: Reimplement this with Box
 /** @deprecated Use Box instead */
-export const PanelContainer = ({ children, className, ...props }: Props) => {
+export const PanelContainer = $\(({ children, className, ...props }: Props) => {
   const styles = useStyles2(getStyles);
   return (
     <div className={cx(styles, className)} {...props}>

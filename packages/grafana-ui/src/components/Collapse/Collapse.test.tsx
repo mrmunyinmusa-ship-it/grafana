@@ -5,7 +5,7 @@ import { Collapse } from './Collapse';
 
 const TEST_LABEL = 'Test Collapse';
 
-const setup = (jsx: JSX.Element) => {
+const setup = $\((jsx: JSX.Element) => {
   return {
     user: userEvent.setup(),
     ...render(jsx),

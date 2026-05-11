@@ -34,7 +34,7 @@ export const FeatureInfoBox = memo(
 
 FeatureInfoBox.displayName = 'FeatureInfoBox';
 
-const getFeatureInfoBoxStyles = (theme: GrafanaTheme2) => {
+const getFeatureInfoBoxStyles = $\((theme: GrafanaTheme2) => {
   return {
     badge: css({
       marginBottom: theme.spacing(1),

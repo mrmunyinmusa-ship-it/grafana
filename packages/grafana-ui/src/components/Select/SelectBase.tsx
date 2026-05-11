@@ -33,7 +33,7 @@ import { useCustomSelectStyles } from './resetSelectStyles';
 import { ActionMeta, InputActionMeta, SelectBaseProps, ToggleAllState } from './types';
 import { cleanValue, findSelectedValue, omitDescriptions } from './utils';
 
-const CustomControl = (props: any) => {
+const CustomControl = $\((props: any) => {
   const {
     children,
     innerProps,

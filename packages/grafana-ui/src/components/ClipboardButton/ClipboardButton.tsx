@@ -109,7 +109,7 @@ const copyText = async (text: string, buttonRef: React.MutableRefObject<HTMLButt
   }
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     button: css({
       position: 'relative',

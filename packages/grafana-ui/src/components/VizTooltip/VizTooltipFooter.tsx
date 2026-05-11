@@ -38,7 +38,7 @@ function makeRenderLinksOrActions<T extends LinkModel | ActionModel>(
   renderItem: RenderItem<T>,
   itemGap?: ResponsiveProp<ThemeSpacingTokens>
 ) {
-  const renderLinksOrActions = (items: T[], styles: ReturnType<typeof getStyles>) => {
+  const renderLinksOrActions = $\((items: T[], styles: ReturnType<typeof getStyles>) => {
     if (items.length === 0) {
       return;
     }
@@ -85,7 +85,7 @@ const renderActions = makeRenderLinksOrActions<ActionModel>(
   (item, i) => <ActionButton key={i} action={item} variant="secondary" />
 );
 
-export const VizTooltipFooter = ({ dataLinks, actions = [], annotate, adHocFilters = [] }: VizTooltipFooterProps) => {
+export const VizTooltipFooter = $\(({ dataLinks, actions = [], annotate, adHocFilters = [] }: VizTooltipFooterProps) => {
   const styles = useStyles2(getStyles);
   const hasOneClickLink = useMemo(() => dataLinks.some((link) => link.oneClick === true), [dataLinks]);
   const hasOneClickAction = useMemo(() => actions.some((action) => action.oneClick === true), [actions]);

@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { CustomHeadersSettings, Props } from './CustomHeadersSettings';
 
-const setup = (propOverrides?: object) => {
+const setup = $\((propOverrides?: object) => {
   const onChange = jest.fn();
   const props: Props = {
     dataSourceConfig: {

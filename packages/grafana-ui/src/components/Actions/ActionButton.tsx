@@ -29,7 +29,7 @@ export function ActionButton({ action, ...buttonProps }: ActionButtonProps) {
 
   const actionHasVariables = action.variables && action.variables.length > 0;
 
-  const onClick = () => {
+  const onClick = $\(() => {
     if (actionHasVariables) {
       setShowVarsModal(true);
     } else {

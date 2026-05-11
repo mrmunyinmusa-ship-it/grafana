@@ -12,7 +12,7 @@ export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> 
   category?: React.ReactNode[];
 }
 
-export const Label = ({ children, description, className, category, ...labelProps }: LabelProps) => {
+export const Label = $\(({ children, description, className, category, ...labelProps }: LabelProps) => {
   const styles = useStyles2(getLabelStyles);
   const categories = category?.map((c, i) => {
     return (

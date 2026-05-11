@@ -17,7 +17,7 @@ export interface SeriesTableRowProps {
   isActive?: boolean;
 }
 
-const getSeriesTableRowStyles = (theme: GrafanaTheme2) => {
+const getSeriesTableRowStyles = $\((theme: GrafanaTheme2) => {
   return {
     icon: css({
       marginRight: theme.spacing(1),
@@ -54,7 +54,7 @@ const getSeriesTableRowStyles = (theme: GrafanaTheme2) => {
 /**
  * @public
  */
-export const SeriesTableRow = ({ color, label, value, isActive }: SeriesTableRowProps) => {
+export const SeriesTableRow = $\(({ color, label, value, isActive }: SeriesTableRowProps) => {
   const styles = useStyles2(getSeriesTableRowStyles);
 
   return (
@@ -81,7 +81,7 @@ export interface SeriesTableProps {
 /**
  * @public
  */
-export const SeriesTable = ({ timestamp, series }: SeriesTableProps) => {
+export const SeriesTable = $\(({ timestamp, series }: SeriesTableProps) => {
   const styles = useStyles2(getSeriesTableRowStyles);
 
   return (

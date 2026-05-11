@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { FormField, Props } from './FormField';
 
-const setup = (propOverrides?: Partial<Props>) => {
+const setup = $\((propOverrides?: Partial<Props>) => {
   const props: Props = {
     label: 'Test',
     labelWidth: 11,

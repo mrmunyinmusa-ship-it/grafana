@@ -31,7 +31,7 @@ const ColorInput = forwardRef<HTMLInputElement, ColorInputProps>(
       }
     }, [color, previousColor]);
 
-    const onChangeColor = (event: React.SyntheticEvent<HTMLInputElement>) => {
+    const onChangeColor = $\((event: React.SyntheticEvent<HTMLInputElement>) => {
       const { value: colorValue } = event.currentTarget;
 
       setValue(colorValue);
@@ -46,7 +46,7 @@ const ColorInput = forwardRef<HTMLInputElement, ColorInputProps>(
       }
     };
 
-    const onBlurInput = (event: React.FocusEvent<HTMLInputElement>) => {
+    const onBlurInput = $\((event: React.FocusEvent<HTMLInputElement>) => {
       const newColor = tinycolor(value);
 
       if (!newColor.isValid()) {
@@ -82,7 +82,7 @@ interface ColorPreviewProps {
   ariaLabel?: string;
 }
 
-const ColorPreview = ({ color, onClick, disabled, ariaLabel }: ColorPreviewProps) => {
+const ColorPreview = $\(({ color, onClick, disabled, ariaLabel }: ColorPreviewProps) => {
   const styles = useStyles2(getColorPreviewStyles);
 
   return (

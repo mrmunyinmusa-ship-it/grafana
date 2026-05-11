@@ -15,7 +15,7 @@ export interface SpectrumPaletteProps {
   onChange: (color: string) => void;
 }
 
-const SpectrumPalette = ({ color, onChange }: SpectrumPaletteProps) => {
+const SpectrumPalette = $\(({ color, onChange }: SpectrumPaletteProps) => {
   const [currentColor, setColor] = useState(color);
 
   useThrottleFn(

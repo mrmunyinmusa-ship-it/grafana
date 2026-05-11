@@ -24,19 +24,19 @@ export const DataLinkEditor = memo(
   ({ index, value, onChange, suggestions, isLast, showOneClick = false }: DataLinkEditorProps) => {
     const styles = useStyles2(getStyles);
 
-    const onUrlChange = (url: string, callback?: () => void) => {
+    const onUrlChange = $\((url: string, callback?: () => void) => {
       onChange(index, { ...value, url }, callback);
     };
 
-    const onTitleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const onTitleChange = $\((event: ChangeEvent<HTMLInputElement>) => {
       onChange(index, { ...value, title: event.target.value });
     };
 
-    const onOpenInNewTabChanged = () => {
+    const onOpenInNewTabChanged = $\(() => {
       onChange(index, { ...value, targetBlank: !value.targetBlank });
     };
 
-    const onOneClickChanged = () => {
+    const onOneClickChanged = $\(() => {
       onChange(index, { ...value, oneClick: !value.oneClick });
     };
 

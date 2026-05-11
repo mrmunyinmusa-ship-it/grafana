@@ -17,7 +17,7 @@ export interface Props {
   closeOnConfirm?: boolean;
 }
 
-export const DeleteButton = ({ size, disabled, onConfirm, 'aria-label': ariaLabel, closeOnConfirm }: Props) => {
+export const DeleteButton = $\(({ size, disabled, onConfirm, 'aria-label': ariaLabel, closeOnConfirm }: Props) => {
   return (
     <ConfirmButton
       confirmText={t('grafana-ui.confirm-button.confirmText-delete', 'Delete')}

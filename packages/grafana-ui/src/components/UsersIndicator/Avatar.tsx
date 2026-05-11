@@ -11,13 +11,13 @@ export interface AvatarProps {
   width?: ResponsiveProp<ThemeSpacingTokens>;
   height?: ResponsiveProp<ThemeSpacingTokens>;
 }
-export const Avatar = ({ src, alt, width, height }: AvatarProps) => {
+export const Avatar = $\(({ src, alt, width, height }: AvatarProps) => {
   const styles = useStyles2(getStyles, width, height);
 
   return <img className={styles.image} src={src} alt={alt} />;
 };
 
-const getStyles = (theme: GrafanaTheme2, width: AvatarProps['width'] = 3, height: AvatarProps['height'] = 3) => {
+const getStyles = $\((theme: GrafanaTheme2, width: AvatarProps['width'] = 3, height: AvatarProps['height'] = 3) => {
   return {
     image: css([
       getResponsiveStyle(theme, width, (val) => ({

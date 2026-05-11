@@ -206,7 +206,7 @@ interface IconRendererProps {
   className?: string;
   iconType?: IconType;
 }
-export const IconRenderer = ({ icon, size, className, iconType }: IconRendererProps) => {
+export const IconRenderer = $\(({ icon, size, className, iconType }: IconRendererProps) => {
   if (!icon) {
     return null;
   }
@@ -229,7 +229,7 @@ export interface StyleProps {
   narrow?: boolean;
 }
 
-export const getButtonStyles = (props: StyleProps) => {
+export const getButtonStyles = $\((props: StyleProps) => {
   const { theme, variant, fill = 'solid', size, iconOnly, fullWidth } = props;
   const { height, padding, fontSize } = getPropertiesForButtonSize(size, theme);
   const variantStyles = getPropertiesForVariant(theme, variant, fill);
@@ -424,7 +424,7 @@ export function getPropertiesForVariant(theme: GrafanaTheme2, variant: ButtonVar
   }
 }
 
-export const clearButtonStyles = (theme: GrafanaTheme2) => {
+export const clearButtonStyles = $\((theme: GrafanaTheme2) => {
   return css({
     background: 'transparent',
     color: theme.colors.text.primary,
@@ -433,7 +433,7 @@ export const clearButtonStyles = (theme: GrafanaTheme2) => {
   });
 };
 
-export const clearLinkButtonStyles = (theme: GrafanaTheme2) => {
+export const clearLinkButtonStyles = $\((theme: GrafanaTheme2) => {
   return css({
     background: 'transparent',
     border: 'none',

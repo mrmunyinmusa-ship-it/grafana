@@ -18,7 +18,7 @@ function fontSizeReductionFactor(fontSize: number) {
   return 0.6;
 }
 
-export const FormattedValueDisplay = ({ value, className, style, ...htmlProps }: Props) => {
+export const FormattedValueDisplay = $\(({ value, className, style, ...htmlProps }: Props) => {
   const hasPrefix = (value.prefix ?? '').length > 0;
   const hasSuffix = (value.suffix ?? '').length > 0;
   let suffixStyle;

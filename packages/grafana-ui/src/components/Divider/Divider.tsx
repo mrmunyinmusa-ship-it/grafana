@@ -9,7 +9,7 @@ interface DividerProps {
   spacing?: ThemeSpacingTokens;
 }
 
-export const Divider = ({ direction = 'horizontal', spacing = 2 }: DividerProps) => {
+export const Divider = $\(({ direction = 'horizontal', spacing = 2 }: DividerProps) => {
   const styles = useStyles2(getStyles, spacing);
 
   if (direction === 'vertical') {
@@ -21,7 +21,7 @@ export const Divider = ({ direction = 'horizontal', spacing = 2 }: DividerProps)
 
 Divider.displayName = 'Divider';
 
-const getStyles = (theme: GrafanaTheme2, spacing: ThemeSpacingTokens) => {
+const getStyles = $\((theme: GrafanaTheme2, spacing: ThemeSpacingTokens) => {
   return {
     horizontalDivider: css({
       borderTop: `1px solid ${theme.colors.border.weak}`,

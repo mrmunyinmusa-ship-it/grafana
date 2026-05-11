@@ -17,7 +17,7 @@ export interface LoadingPlaceholderProps extends HTMLAttributes<HTMLDivElement> 
 /**
  * @public
  */
-export const LoadingPlaceholder = ({ text, className, ...rest }: LoadingPlaceholderProps) => {
+export const LoadingPlaceholder = $\(({ text, className, ...rest }: LoadingPlaceholderProps) => {
   const styles = useStyles2(getStyles);
   return (
     <div className={cx(styles.container, className)} {...rest}>
@@ -26,7 +26,7 @@ export const LoadingPlaceholder = ({ text, className, ...rest }: LoadingPlacehol
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       marginBottom: theme.spacing(4),

@@ -31,7 +31,7 @@ const options = [
   },
 ];
 
-const CascaderWithOptionsStateUpdate = (props: Omit<CascaderProps, 'options' | 'theme'>) => {
+const CascaderWithOptionsStateUpdate = $\((props: Omit<CascaderProps, 'options' | 'theme'>) => {
   const [updatedOptions, setOptions] = useState<CascaderOption[]>([
     {
       label: 'Initial state option',

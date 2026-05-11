@@ -28,7 +28,7 @@ interface DemoBoxProps {
   textColor?: TextProps['color'];
 }
 
-const DemoBox = ({ bg, border, children, shadow }: React.PropsWithChildren<DemoBoxProps>) => {
+const DemoBox = $\(({ bg, border, children, shadow }: React.PropsWithChildren<DemoBoxProps>) => {
   return (
     <Box
       backgroundColor={bg ? bg : undefined}
@@ -59,7 +59,7 @@ const DemoText = ({
   );
 };
 
-export const ThemeDemo = () => {
+export const ThemeDemo = $\(() => {
   const [radioValue, setRadioValue] = useState('v');
   const [boolValue, setBoolValue] = useState(false);
   const [selectValue, setSelectValue] = useState('Item 2');

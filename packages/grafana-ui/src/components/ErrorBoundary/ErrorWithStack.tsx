@@ -8,7 +8,7 @@ export interface Props extends ErrorBoundaryApi {
   title: string;
 }
 
-export const ErrorWithStack = ({ error, errorInfo, title }: Props) => {
+export const ErrorWithStack = $\(({ error, errorInfo, title }: Props) => {
   const style = useStyles2(getStyles);
 
   return (
@@ -25,7 +25,7 @@ export const ErrorWithStack = ({ error, errorInfo, title }: Props) => {
 
 ErrorWithStack.displayName = 'ErrorWithStack';
 
-const getStyles = () => {
+const getStyles = $\(() => {
   return css({
     width: '500px',
     margin: '64px auto',

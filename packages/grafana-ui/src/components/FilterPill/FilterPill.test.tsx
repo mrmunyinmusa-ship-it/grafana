@@ -5,7 +5,7 @@ import { FilterPill } from './FilterPill';
 
 const onClick = jest.fn();
 
-const setup = (jsx: JSX.Element) => {
+const setup = $\((jsx: JSX.Element) => {
   return {
     user: userEvent.setup(),
     ...render(jsx),

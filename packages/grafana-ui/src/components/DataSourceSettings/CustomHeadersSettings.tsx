@@ -53,7 +53,7 @@ const getCustomHeaderRowStyles = () => ({
   }),
 });
 
-const CustomHeaderRow = ({ header, onBlur, onChange, onRemove, onReset }: CustomHeaderRowProps) => {
+const CustomHeaderRow = $\(({ header, onBlur, onChange, onRemove, onReset }: CustomHeaderRowProps) => {
   const styles = useStyles2(getCustomHeaderRowStyles);
 
   return (

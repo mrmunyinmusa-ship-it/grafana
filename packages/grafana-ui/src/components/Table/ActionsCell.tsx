@@ -7,7 +7,7 @@ import { ActionButton } from '../Actions/ActionButton';
 
 import { TableCellProps } from './types';
 
-export const ActionsCell = (props: TableCellProps) => {
+export const ActionsCell = $\((props: TableCellProps) => {
   const { cellProps, tableStyles, actions } = props;
 
   const styles = useStyles2(getStyles);

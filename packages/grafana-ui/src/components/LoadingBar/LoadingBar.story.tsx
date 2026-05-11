@@ -20,7 +20,7 @@ const meta: Meta<typeof LoadingBar> = {
   },
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const { borderColor } = theme.components.panel;
 
   return {

@@ -5,7 +5,7 @@ import { Text } from '../Text/Text';
 
 import { getSelectStyles } from './getSelectStyles';
 
-export const SelectOptionGroupHeader = (props: GroupHeadingProps) => {
+export const SelectOptionGroupHeader = $\((props: GroupHeadingProps) => {
   const styles = useStyles2(getSelectStyles);
 
   return (

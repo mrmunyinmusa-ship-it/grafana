@@ -27,7 +27,7 @@ function getStartIndices(parts: HighlightPart[], length: number): number[] {
   return indices;
 }
 
-export const PartialHighlighter = (props: Props) => {
+export const PartialHighlighter = $\((props: Props) => {
   let { highlightParts, text, highlightClassName } = props;
 
   if (!highlightParts?.length) {

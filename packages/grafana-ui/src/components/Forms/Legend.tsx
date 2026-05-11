@@ -11,7 +11,7 @@ export interface LabelProps extends React.HTMLAttributes<HTMLLegendElement> {
   description?: string;
 }
 
-export const getLegendStyles = (theme: GrafanaTheme2) => {
+export const getLegendStyles = $\((theme: GrafanaTheme2) => {
   return {
     legend: css({
       fontSize: theme.typography.h3.fontSize,
@@ -21,7 +21,7 @@ export const getLegendStyles = (theme: GrafanaTheme2) => {
   };
 };
 
-export const Legend = ({ children, className, ...legendProps }: LabelProps) => {
+export const Legend = $\(({ children, className, ...legendProps }: LabelProps) => {
   const styles = useStyles2(getLegendStyles);
 
   return (

@@ -48,7 +48,7 @@ export const ColorPickerInput = forwardRef<HTMLInputElement, ColorPickerInputPro
       [currentColor]
     );
 
-    const handleBlur = (evt: FocusEvent<HTMLInputElement>) => {
+    const handleBlur = $\((evt: FocusEvent<HTMLInputElement>) => {
       // Unless the user clicked inside the color picker, close it on blur
       const isClickInPopover = document.querySelector('[data-testid="color-popover"]')?.contains(evt.relatedTarget);
       if (!isClickInPopover) {
@@ -86,7 +86,7 @@ export const ColorPickerInput = forwardRef<HTMLInputElement, ColorPickerInputPro
 
 ColorPickerInput.displayName = 'ColorPickerInput';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     wrapper: css({
       position: 'relative',

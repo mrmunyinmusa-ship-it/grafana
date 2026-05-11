@@ -56,7 +56,7 @@ interface FormDTO {
   };
 }
 
-const renderForm = (defaultValues?: FormDTO) => {
+const renderForm = $\((defaultValues?: FormDTO) => {
   const nameId = useId();
   const emailId = useId();
   const usernameId = useId();
@@ -133,11 +133,11 @@ const renderForm = (defaultValues?: FormDTO) => {
   );
 };
 
-export const Basic = () => {
+export const Basic = $\(() => {
   return <>{renderForm()}</>;
 };
 
-export const DefaultValues = () => {
+export const DefaultValues = $\(() => {
   const defaultValues = [
     {
       name: 'Roger Waters',
@@ -188,7 +188,7 @@ AsyncValidation.args = {
   passAsyncValidation: true,
 };
 
-const validateAsync = (shouldPass: boolean) => async () => {
+const validateAsync = $\((shouldPass: boolean) => async () => {
   try {
     await new Promise<ValidateResult | void>((resolve, reject) => {
       setTimeout(() => {

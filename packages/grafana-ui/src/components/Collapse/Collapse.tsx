@@ -105,7 +105,7 @@ export interface Props {
   className?: string;
 }
 
-export const ControlledCollapse = ({ isOpen, onToggle, ...otherProps }: React.PropsWithChildren<Props>) => {
+export const ControlledCollapse = $\(({ isOpen, onToggle, ...otherProps }: React.PropsWithChildren<Props>) => {
   const [open, setOpen] = useState(isOpen);
   return (
     <Collapse
@@ -133,7 +133,7 @@ export const Collapse = ({
 }: React.PropsWithChildren<Props>) => {
   const buttonStyles = useStyles2(clearButtonStyles);
   const style = useStyles2(getStyles);
-  const onClickToggle = () => {
+  const onClickToggle = $\(() => {
     if (onToggle) {
       onToggle(!isOpen);
     }

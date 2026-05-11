@@ -11,7 +11,7 @@ export interface Props {
 }
 
 /** @beta */
-export const InlineSegmentGroup = ({ children, className, grow, ...htmlProps }: React.PropsWithChildren<Props>) => {
+export const InlineSegmentGroup = $\(({ children, className, grow, ...htmlProps }: React.PropsWithChildren<Props>) => {
   const styles = useStyles2(getStyles, grow);
 
   return (
@@ -23,7 +23,7 @@ export const InlineSegmentGroup = ({ children, className, grow, ...htmlProps }: 
 
 InlineSegmentGroup.displayName = 'InlineSegmentGroup';
 
-const getStyles = (theme: GrafanaTheme2, grow?: boolean) => {
+const getStyles = $\((theme: GrafanaTheme2, grow?: boolean) => {
   return {
     container: css({
       display: 'flex',

@@ -124,7 +124,7 @@ export const MenuItem = React.memo(
     const localRef = useRef<MenuItemElement>(null);
     useImperativeHandle(ref, () => localRef.current!);
 
-    const handleKeys = (event: React.KeyboardEvent) => {
+    const handleKeys = $\((event: React.KeyboardEvent) => {
       switch (event.key) {
         case 'ArrowRight':
           event.preventDefault();
@@ -139,7 +139,7 @@ export const MenuItem = React.memo(
       }
     };
 
-    const closeSubMenu = () => {
+    const closeSubMenu = $\(() => {
       setIsSubMenuOpen(false);
       setIsActive(false);
       localRef?.current?.focus();
@@ -212,7 +212,7 @@ export const MenuItem = React.memo(
 
 MenuItem.displayName = 'MenuItem';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     item: css({
       background: 'none',

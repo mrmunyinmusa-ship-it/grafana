@@ -31,7 +31,7 @@ export interface Props {
   openMenuOnFocus?: boolean;
 }
 
-export const TimeZonePicker = (props: Props) => {
+export const TimeZonePicker = $\((props: Props) => {
   const {
     onChange,
     width,
@@ -155,7 +155,7 @@ const isInternal = (timeZone: TimeZone): boolean => {
   }
 };
 
-const useFilterBySearchIndex = () => {
+const useFilterBySearchIndex = $\(() => {
   return useCallback((option: SelectableValue, searchQuery: string) => {
     if (!searchQuery || !option.data || !option.data.searchIndex) {
       return true;

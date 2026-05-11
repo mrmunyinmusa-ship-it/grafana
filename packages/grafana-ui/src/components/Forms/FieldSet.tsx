@@ -14,7 +14,7 @@ export interface Props extends Omit<HTMLProps<HTMLFieldSetElement>, 'label'> {
   label?: React.ReactNode;
 }
 
-export const FieldSet = ({ label, children, className, ...rest }: Props) => {
+export const FieldSet = $\(({ label, children, className, ...rest }: Props) => {
   const styles = useStyles2(getStyles);
 
   return (

@@ -44,7 +44,7 @@ export const CollapsableSection = ({
   const isControlled = isOpen !== undefined && onToggle !== undefined;
   const isSectionOpen = isControlled ? isOpen : internalOpenState;
 
-  const onClick = (e: React.MouseEvent) => {
+  const onClick = $\((e: React.MouseEvent) => {
     if (e.target instanceof HTMLElement && e.target.tagName === 'A') {
       return;
     }

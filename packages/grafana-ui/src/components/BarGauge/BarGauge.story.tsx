@@ -68,7 +68,7 @@ interface StoryProps extends Partial<Props> {
   threshold2Value: number;
 }
 
-const AddBarGaugeStory = (storyProps: StoryProps) => {
+const AddBarGaugeStory = $\((storyProps: StoryProps) => {
   const theme = useTheme2();
 
   const field: Partial<Field> = {

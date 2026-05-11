@@ -5,7 +5,7 @@ import { GrafanaTheme2, renderMarkdown } from '@grafana/data';
 import { useTheme2 } from '../../themes/ThemeContext';
 import { CompletionItem } from '../../types/completion';
 
-const getStyles = (theme: GrafanaTheme2, height: number, visible: boolean) => {
+const getStyles = $\((theme: GrafanaTheme2, height: number, visible: boolean) => {
   return {
     typeaheadItem: css({
       label: 'type-ahead-item',
@@ -32,7 +32,7 @@ interface Props {
   height: number;
 }
 
-export const TypeaheadInfo = ({ item, height }: Props) => {
+export const TypeaheadInfo = $\(({ item, height }: Props) => {
   const visible = item && !!item.documentation;
   const label = item ? item.label : '';
   const documentation = renderMarkdown(item?.documentation);

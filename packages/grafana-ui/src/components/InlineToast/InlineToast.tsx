@@ -67,7 +67,7 @@ export function InlineToast({ referenceElement, children, suffixIcon, placement 
   );
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     root: css({
       ...theme.typography.bodySmall,
@@ -83,7 +83,7 @@ const getStyles = (theme: GrafanaTheme2) => {
   };
 };
 
-const getInitialTransform = (placement: InlineToastProps['placement'], theme: GrafanaTheme2) => {
+const getInitialTransform = $\((placement: InlineToastProps['placement'], theme: GrafanaTheme2) => {
   const gap = 1;
 
   switch (placement) {

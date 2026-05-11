@@ -36,7 +36,7 @@ function isBooleanReducer(r: ReducerID) {
   return r === ReducerID.allIsNull || r === ReducerID.allIsZero;
 }
 
-export const FieldValueMatcherEditor = ({ options, onChange }: Props) => {
+export const FieldValueMatcherEditor = $\(({ options, onChange }: Props) => {
   const styles = useStyles2(getStyles);
   const reducer = useMemo(() => fieldReducers.selectOptions([options?.reducer]), [options?.reducer]);
 
@@ -90,7 +90,7 @@ export const FieldValueMatcherEditor = ({ options, onChange }: Props) => {
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     spot: css({
       display: 'flex',

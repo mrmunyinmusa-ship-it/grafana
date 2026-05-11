@@ -25,7 +25,7 @@ export interface MenuGroupProps extends Partial<MenuItemsGroup> {
 }
 
 /** @internal */
-export const MenuGroup = ({ label, ariaLabel, children }: MenuGroupProps) => {
+export const MenuGroup = $\(({ label, ariaLabel, children }: MenuGroupProps) => {
   const styles = useStyles2(getStyles);
   const labelID = `group-label-${uniqueId()}`;
 
@@ -43,7 +43,7 @@ export const MenuGroup = ({ label, ariaLabel, children }: MenuGroupProps) => {
 MenuGroup.displayName = 'MenuGroup';
 
 /** @internal */
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     groupLabel: css({
       color: theme.colors.text.secondary,

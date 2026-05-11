@@ -29,7 +29,7 @@ export const InputControl = forwardRef<HTMLDivElement, React.PropsWithChildren<I
   }
 );
 
-const getInputControlStyles = (theme: GrafanaTheme2, invalid: boolean, withPrefix: boolean) => {
+const getInputControlStyles = $\((theme: GrafanaTheme2, invalid: boolean, withPrefix: boolean) => {
   const styles = getInputStyles({ theme, invalid });
 
   return {

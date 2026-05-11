@@ -17,7 +17,7 @@ const meta: Meta<typeof PageToolbar> = {
   },
 };
 
-export const Examples = () => {
+export const Examples = $\(() => {
   return (
     <Stack direction="column">
       <StoryExample name="With non clickable title">

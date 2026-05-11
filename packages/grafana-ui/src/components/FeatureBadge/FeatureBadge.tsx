@@ -8,7 +8,7 @@ export interface FeatureBadgeProps {
   tooltip?: string;
 }
 
-export const FeatureBadge = ({ featureState, tooltip }: FeatureBadgeProps) => {
+export const FeatureBadge = $\(({ featureState, tooltip }: FeatureBadgeProps) => {
   const display = getPanelStateBadgeDisplayModel(featureState);
   return <Badge text={display.text} color={display.color} icon={display.icon} tooltip={tooltip} />;
 };

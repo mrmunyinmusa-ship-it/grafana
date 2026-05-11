@@ -33,7 +33,7 @@ export const SelectContainer = <Option, isMulti extends boolean, Group extends G
   );
 };
 
-const getSelectContainerStyles = (theme: GrafanaTheme2, focused: boolean, disabled: boolean, invalid: boolean) => {
+const getSelectContainerStyles = $\((theme: GrafanaTheme2, focused: boolean, disabled: boolean, invalid: boolean) => {
   const styles = getInputStyles({ theme, invalid });
 
   return {

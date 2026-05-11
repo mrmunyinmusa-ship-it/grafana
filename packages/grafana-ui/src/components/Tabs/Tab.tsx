@@ -123,7 +123,7 @@ export const Tab = React.forwardRef<HTMLElement, TabProps>(
 
 Tab.displayName = 'Tab';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     item: css({
       listStyle: 'none',

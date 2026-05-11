@@ -10,7 +10,7 @@ export interface CounterProps {
   variant?: CounterVariant;
 }
 
-export const Counter = ({ value, variant = 'secondary' }: CounterProps) => {
+export const Counter = $\(({ value, variant = 'secondary' }: CounterProps) => {
   const styles = useStyles2(getStyles, variant);
 
   return <span className={styles.counter}>{locale(value, 0).text}</span>;

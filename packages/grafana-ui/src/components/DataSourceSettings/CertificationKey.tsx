@@ -18,7 +18,7 @@ interface Props {
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const CertificationKey = ({ hasCert, label, onChange, onClick, placeholder, useGrow }: Props) => {
+export const CertificationKey = $\(({ hasCert, label, onChange, onClick, placeholder, useGrow }: Props) => {
   return (
     <InlineFieldRow>
       <InlineField label={label} labelWidth={14} disabled={hasCert} grow={useGrow}>

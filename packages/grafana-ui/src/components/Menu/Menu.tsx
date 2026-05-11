@@ -70,7 +70,7 @@ export const Menu = Object.assign(MenuComp, {
   Group: MenuGroup,
 });
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     header: css({
       padding: theme.spacing(0.5, 0.5, 1, 0.5),

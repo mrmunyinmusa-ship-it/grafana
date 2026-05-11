@@ -167,7 +167,7 @@ export const DataLinkInput = memo(
       setLinkUrl(value);
     }, []);
 
-    const onVariableSelect = (item: VariableSuggestion, editor = editorRef.current!) => {
+    const onVariableSelect = $\((item: VariableSuggestion, editor = editorRef.current!) => {
       const precedingChar: string = getCharactersAroundCaret();
       const precedingDollar = precedingChar === '$';
       if (item.origin !== VariableOrigin.Template || item.value === DataLinkBuiltInVars.includeVars) {
@@ -183,7 +183,7 @@ export const DataLinkInput = memo(
       stateRef.current.onChange(Plain.serialize(editor.value));
     };
 
-    const getCharactersAroundCaret = () => {
+    const getCharactersAroundCaret = $\(() => {
       const input: HTMLSpanElement | null = document.getElementById('data-link-input')!;
       let precedingChar = '',
         sel: Selection | null,

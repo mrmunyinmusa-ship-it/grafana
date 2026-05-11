@@ -28,7 +28,7 @@ export interface ButtonCascaderProps {
   hideDownIcon?: boolean;
 }
 
-export const ButtonCascader = (props: ButtonCascaderProps) => {
+export const ButtonCascader = $\((props: ButtonCascaderProps) => {
   const { onChange, className, loadData, icon, buttonProps, hideDownIcon, variant, disabled, ...rest } = props;
   const styles = useStyles2(getStyles);
   const cascaderStyles = useStyles2(getCascaderStyles);
@@ -57,7 +57,7 @@ export const ButtonCascader = (props: ButtonCascaderProps) => {
 
 ButtonCascader.displayName = 'ButtonCascader';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     popup: css({
       label: 'popup',

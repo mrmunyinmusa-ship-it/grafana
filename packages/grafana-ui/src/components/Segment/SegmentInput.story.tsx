@@ -14,7 +14,7 @@ const SegmentFrame = ({ children }: React.PropsWithChildren) => (
   </>
 );
 
-export const BasicInput = () => {
+export const BasicInput = $\(() => {
   const [value, setValue] = useState<string | number>('some text');
   return (
     <SegmentFrame>
@@ -34,7 +34,7 @@ const meta: Meta<typeof SegmentInput> = {
   component: SegmentInput,
 };
 
-export const BasicInputWithPlaceholder = () => {
+export const BasicInputWithPlaceholder = $\(() => {
   const [value, setValue] = useState<string | number>('');
   return (
     <SegmentFrame>
@@ -50,7 +50,7 @@ export const BasicInputWithPlaceholder = () => {
   );
 };
 
-export const BasicInputWithHtmlAttributes = () => {
+export const BasicInputWithHtmlAttributes = $\(() => {
   const [value, setValue] = useState<string | number>('some text');
   return (
     <SegmentFrame>
@@ -71,7 +71,7 @@ interface InputComponentProps {
   initialValue: string | number;
 }
 
-const InputComponent = ({ initialValue }: InputComponentProps) => {
+const InputComponent = $\(({ initialValue }: InputComponentProps) => {
   const [value, setValue] = useState(initialValue);
   return (
     <SegmentInput
@@ -86,7 +86,7 @@ const InputComponent = ({ initialValue }: InputComponentProps) => {
   );
 };
 
-export const InputWithAutoFocus = () => {
+export const InputWithAutoFocus = $\(() => {
   const [inputComponents, setInputComponents] = useState<Array<(props: InputComponentProps) => JSX.Element>>([]);
   return (
     <SegmentFrame>

@@ -19,7 +19,7 @@ export type LoadingIndicatorProps = {
 /**
  * @internal
  */
-export const LoadingIndicator = ({ onCancel, loading }: LoadingIndicatorProps) => {
+export const LoadingIndicator = $\(({ onCancel, loading }: LoadingIndicatorProps) => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const styles = useStyles2(getStyles);
 
@@ -49,7 +49,7 @@ const spin = keyframes({
   },
 });
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     clickable: css({
       cursor: 'pointer',

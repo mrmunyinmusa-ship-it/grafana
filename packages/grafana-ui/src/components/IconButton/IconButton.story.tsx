@@ -43,7 +43,7 @@ export const Basic: StoryFn<typeof IconButton> = (args: IconButtonProps) => {
   return <IconButton {...args} />;
 };
 
-export const ExamplesSizes = (args: BasePropsWithTooltip) => {
+export const ExamplesSizes = $\((args: BasePropsWithTooltip) => {
   const theme = useTheme2();
   const sizes: IconSize[] = ['xs', 'sm', 'md', 'lg', 'xl'];
   const icons: IconName[] = ['search', 'trash-alt', 'arrow-left', 'times'];
@@ -102,8 +102,8 @@ ExamplesSizes.parameters = {
   },
 };
 
-export const ExamplesBackground = (args: BasePropsWithTooltip) => {
-  const RenderBackgroundScenario = ({ background }: ScenarioProps) => {
+export const ExamplesBackground = $\((args: BasePropsWithTooltip) => {
+  const RenderBackgroundScenario = $\(({ background }: ScenarioProps) => {
     const theme = useTheme2();
     const variants: IconButtonVariant[] = ['primary', 'secondary', 'destructive'];
 

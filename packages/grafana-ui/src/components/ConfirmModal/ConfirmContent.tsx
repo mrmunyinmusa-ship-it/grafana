@@ -65,7 +65,7 @@ export const ConfirmContent = ({
   const styles = useStyles2(getStyles);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  const onConfirmationTextChange = (event: React.FormEvent<HTMLInputElement>) => {
+  const onConfirmationTextChange = $\((event: React.FormEvent<HTMLInputElement>) => {
     setIsDisabled(confirmPromptText?.toLowerCase().localeCompare(event.currentTarget.value.toLowerCase()) !== 0);
   };
 

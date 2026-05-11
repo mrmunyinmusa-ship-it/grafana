@@ -16,7 +16,7 @@ export interface CardInnerProps {
 }
 
 /** @deprecated This component will be removed in a future release */
-const CardInner = ({ children, href }: CardInnerProps) => {
+const CardInner = $\(({ children, href }: CardInnerProps) => {
   const { inner } = useStyles2(getCardInnerStyles);
   return href ? (
     <a className={inner} href={href}>

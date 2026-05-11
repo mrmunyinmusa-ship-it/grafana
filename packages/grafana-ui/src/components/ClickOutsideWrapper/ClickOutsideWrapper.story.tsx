@@ -14,7 +14,7 @@ const meta: Meta<typeof ClickOutsideWrapper> = {
   },
 };
 
-export const basic = () => {
+export const basic = $\(() => {
   return (
     <ClickOutsideWrapper
       onClick={() => {

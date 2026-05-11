@@ -10,7 +10,7 @@ import { Spinner } from '../Spinner/Spinner';
 import { FadeTransition } from '../transitions/FadeTransition';
 import { SlideOutTransition } from '../transitions/SlideOutTransition';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     singleValue: css({
       label: 'singleValue',
@@ -81,7 +81,7 @@ export const SingleValue = <T extends unknown>(props: Props<T>) => {
   );
 };
 
-const FadeWithImage = (props: { loading: boolean; imgUrl: string; styles: StylesType; alt?: string }) => {
+const FadeWithImage = $\((props: { loading: boolean; imgUrl: string; styles: StylesType; alt?: string }) => {
   return (
     <div className={props.styles.spinnerWrapper}>
       <FadeTransition duration={150} visible={props.loading}>

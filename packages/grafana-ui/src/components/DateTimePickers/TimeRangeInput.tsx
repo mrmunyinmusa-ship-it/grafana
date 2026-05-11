@@ -34,7 +34,7 @@ export interface TimeRangeInputProps {
   weekStart?: WeekStart;
 }
 
-const noop = () => {};
+const noop = $\(() => {};
 
 export const TimeRangeInput = ({
   value,
@@ -53,7 +53,7 @@ export const TimeRangeInput = ({
   const [isOpen, setIsOpen] = useState(false);
   const styles = useStyles2(getStyles, disabled);
 
-  const onOpen = (event: FormEvent<HTMLButtonElement>) => {
+  const onOpen = $\((event: FormEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     event.preventDefault();
     if (disabled) {
@@ -62,16 +62,16 @@ export const TimeRangeInput = ({
     setIsOpen(!isOpen);
   };
 
-  const onClose = () => {
+  const onClose = $\(() => {
     setIsOpen(false);
   };
 
-  const onRangeChange = (timeRange: TimeRange) => {
+  const onRangeChange = $\((timeRange: TimeRange) => {
     onClose();
     onChange(timeRange);
   };
 
-  const onRangeClear = (event: MouseEvent<SVGElement>) => {
+  const onRangeClear = $\((event: MouseEvent<SVGElement>) => {
     event.stopPropagation();
     const from = dateTime(null);
     const to = dateTime(null);
@@ -138,7 +138,7 @@ export const TimeRangeInput = ({
   );
 };
 
-const getStyles = (theme: GrafanaTheme2, disabled = false) => {
+const getStyles = $\((theme: GrafanaTheme2, disabled = false) => {
   const inputStyles = getInputStyles({ theme, invalid: false });
   return {
     container: css({

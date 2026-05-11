@@ -19,6 +19,6 @@ export interface SpaceProps {
   layout?: 'block' | 'inline';
 }
 
-export const Space = ({ v = 0, h = 0, layout }: SpaceProps) => {
+export const Space = $\(({ v = 0, h = 0, layout }: SpaceProps) => {
   return <Box paddingRight={h} paddingBottom={v} display={layout === 'inline' ? 'inline-block' : 'block'} />;
 };

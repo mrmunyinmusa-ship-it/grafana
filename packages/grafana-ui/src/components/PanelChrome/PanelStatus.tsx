@@ -30,7 +30,7 @@ export function PanelStatus({ message, onClick, ariaLabel = 'status' }: Props) {
   );
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const { headerHeight, padding } = theme.components.panel;
 
   return {

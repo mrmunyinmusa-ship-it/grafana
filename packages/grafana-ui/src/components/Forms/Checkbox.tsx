@@ -64,12 +64,12 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   }
 );
 
-export const getCheckboxStyles = (theme: GrafanaTheme2, invalid = false) => {
+export const getCheckboxStyles = $\((theme: GrafanaTheme2, invalid = false) => {
   const labelStyles = getLabelStyles(theme);
   const checkboxSize = 2;
   const labelPadding = 1;
 
-  const getBorderColor = (color: string) => {
+  const getBorderColor = $\((color: string) => {
     return invalid ? theme.colors.error.border : color;
   };
 

@@ -248,7 +248,7 @@ function useBodyClassWhileOpen() {
   }, []);
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       display: 'flex',

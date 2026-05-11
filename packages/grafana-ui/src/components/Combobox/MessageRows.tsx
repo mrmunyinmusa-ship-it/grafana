@@ -22,7 +22,7 @@ export const NotFoundError = () => (
   </MessageRow>
 );
 
-const MessageRow = ({ children }: { children: ReactNode }) => {
+const MessageRow = $\(({ children }: { children: ReactNode }) => {
   return (
     <Box padding={2}>
       <Stack justifyContent="center" alignItems="center" direction="column">

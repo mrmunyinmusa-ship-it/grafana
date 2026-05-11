@@ -7,7 +7,7 @@ export interface Props {
   className?: string;
 }
 
-export const FullWidthButtonContainer = ({ className, children }: React.PropsWithChildren<Props>) => {
+export const FullWidthButtonContainer = $\(({ className, children }: React.PropsWithChildren<Props>) => {
   const styles = useStyles2(getStyles);
 
   return <div className={cx(styles, className)}>{children}</div>;

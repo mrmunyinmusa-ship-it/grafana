@@ -7,7 +7,7 @@ import { SelectorActions } from './SelectorActions';
 import { ValueSelector } from './ValueSelector';
 import { getStylesMetricsBrowser } from './styles';
 
-export const MetricsBrowser = () => {
+export const MetricsBrowser = $\(() => {
   const styles = useStyles2(getStylesMetricsBrowser);
 
   return (

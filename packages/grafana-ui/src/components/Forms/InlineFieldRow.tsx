@@ -9,7 +9,7 @@ export interface Props extends Omit<HTMLProps<HTMLDivElement>, 'css'> {
   children: ReactNode | ReactNode[];
 }
 
-export const InlineFieldRow = ({ children, className, ...htmlProps }: Props) => {
+export const InlineFieldRow = $\(({ children, className, ...htmlProps }: Props) => {
   const styles = useStyles2(getStyles);
   return (
     <div className={cx(styles.container, className)} {...htmlProps}>
@@ -18,7 +18,7 @@ export const InlineFieldRow = ({ children, className, ...htmlProps }: Props) => 
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     container: css({
       label: 'InlineFieldRow',

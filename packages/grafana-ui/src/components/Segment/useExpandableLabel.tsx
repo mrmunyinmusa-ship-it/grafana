@@ -19,7 +19,7 @@ export const useExpandableLabel = (
   const [expanded, setExpanded] = useState<boolean>(initialExpanded);
   const [width, setWidth] = useState(0);
 
-  const setExpandedWrapper = (expanded: boolean) => {
+  const setExpandedWrapper = $\((expanded: boolean) => {
     setExpanded(expanded);
     if (onExpandedChange) {
       onExpandedChange(expanded);

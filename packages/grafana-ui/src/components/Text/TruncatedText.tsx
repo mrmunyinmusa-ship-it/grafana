@@ -43,7 +43,7 @@ export const TruncatedText = React.forwardRef<HTMLElement, TruncatedTextProps>((
     };
   }, [setIsOverflowing, resizeObserver]);
 
-  const getTooltipText = (children: NonNullable<React.ReactNode>) => {
+  const getTooltipText = $\((children: NonNullable<React.ReactNode>) => {
     if (typeof children === 'string') {
       return children;
     }

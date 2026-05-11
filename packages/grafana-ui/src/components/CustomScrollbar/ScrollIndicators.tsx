@@ -6,7 +6,7 @@ import { GrafanaTheme2 } from '@grafana/data';
 
 import { useStyles2 } from '../../themes/ThemeContext';
 
-export const ScrollIndicators = ({ children }: React.PropsWithChildren<{}>) => {
+export const ScrollIndicators = $\(({ children }: React.PropsWithChildren<{}>) => {
   const [showScrollTopIndicator, setShowTopScrollIndicator] = useState(false);
   const [showScrollBottomIndicator, setShowBottomScrollIndicator] = useState(false);
   const scrollTopMarker = useRef<HTMLDivElement>(null);
@@ -53,7 +53,7 @@ export const ScrollIndicators = ({ children }: React.PropsWithChildren<{}>) => {
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     scrollContent: css({
       flex: 1,

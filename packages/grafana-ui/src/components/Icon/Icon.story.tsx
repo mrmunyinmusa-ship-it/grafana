@@ -25,7 +25,7 @@ const meta: Meta<typeof Icon> = {
   },
 };
 
-const IconWrapper = ({ name }: { name: IconName }) => {
+const IconWrapper = $\(({ name }: { name: IconName }) => {
   const theme = useTheme2();
   const borderColor = theme.colors.border.medium;
 
@@ -60,10 +60,10 @@ const IconWrapper = ({ name }: { name: IconName }) => {
 const icons = [...getAvailableIcons()];
 icons.sort((a, b) => a.localeCompare(b));
 
-export const IconsOverview = () => {
+export const IconsOverview = $\(() => {
   const [filter, setFilter] = useState('');
 
-  const searchIcon = (event: ChangeEvent<HTMLInputElement>) => {
+  const searchIcon = $\((event: ChangeEvent<HTMLInputElement>) => {
     setFilter(event.target.value);
   };
 

@@ -20,7 +20,7 @@ const meta: Meta = {
   },
 };
 
-const createArray = (legendItems: number) => {
+const createArray = $\((legendItems: number) => {
   const newArray = Array.from({ length: legendItems }, (_, i) => i + 1);
   return newArray;
 };

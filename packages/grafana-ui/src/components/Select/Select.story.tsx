@@ -93,7 +93,7 @@ const meta: Meta = {
   decorators: [DeprecatedDecorator],
 };
 
-const loadAsyncOptions = () => {
+const loadAsyncOptions = $\(() => {
   return new Promise<Array<SelectableValue<string>>>((resolve) => {
     setTimeout(() => {
       resolve(generateOptions());
@@ -101,7 +101,7 @@ const loadAsyncOptions = () => {
   });
 };
 
-const getPrefix = (prefix: string) => {
+const getPrefix = $\((prefix: string) => {
   const prefixEl = <Icon name={toIconName(prefix) ?? 'question-circle'} />;
   return prefixEl;
 };

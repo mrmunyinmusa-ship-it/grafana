@@ -429,7 +429,7 @@ const itemsRenderer = (items: ReactNode[] | ReactNode, renderer: (items: ReactNo
   return toRender.length > 0 ? renderer(toRender) : null;
 };
 
-const getHeaderHeight = (theme: GrafanaTheme2, hasHeader: boolean) => {
+const getHeaderHeight = $\((theme: GrafanaTheme2, hasHeader: boolean) => {
   if (hasHeader) {
     return theme.spacing.gridSize * theme.components.panel.headerHeight;
   }
@@ -471,7 +471,7 @@ const getContentStyle = (
   return { contentStyle, innerWidth, innerHeight };
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const { background, borderColor, padding } = theme.components.panel;
 
   return {

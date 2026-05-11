@@ -43,7 +43,7 @@ const SegmentFrame = ({
   </>
 );
 
-export const ArrayOptions = () => {
+export const ArrayOptions = $\(() => {
   const [value, setValue] = useState<SelectableValue<string>>(options[0]);
   return (
     <SegmentFrame options={options}>
@@ -64,7 +64,7 @@ const meta: Meta<typeof Segment> = {
   component: Segment,
 };
 
-export const ArrayOptionsWithPrimitiveValue = () => {
+export const ArrayOptionsWithPrimitiveValue = $\(() => {
   const [value, setValue] = useState<string | undefined>('Option1');
   return (
     <SegmentFrame options={options}>
@@ -80,7 +80,7 @@ export const ArrayOptionsWithPrimitiveValue = () => {
   );
 };
 
-export const ArrayOptionsWithPlaceholder = () => {
+export const ArrayOptionsWithPlaceholder = $\(() => {
   const [value, setValue] = useState<SelectableValue<string>>();
   return (
     <SegmentFrame options={options}>
@@ -97,7 +97,7 @@ export const ArrayOptionsWithPlaceholder = () => {
   );
 };
 
-export const GroupedArrayOptions = () => {
+export const GroupedArrayOptions = $\(() => {
   const [value, setValue] = useState<SelectableValue<string | number>>(groupedOptions[0].options[0]);
   return (
     <SegmentFrame options={groupedOptions}>
@@ -113,7 +113,7 @@ export const GroupedArrayOptions = () => {
   );
 };
 
-export const CustomOptionsAllowed = () => {
+export const CustomOptionsAllowed = $\(() => {
   const [value, setValue] = useState<SelectableValue<string | number>>(options[0]);
   return (
     <SegmentFrame options={options}>
@@ -134,7 +134,7 @@ const CustomLabelComponent = ({ value }: SelectableValue<string | number>) => (
   <div className="gf-form-label">custom({value})</div>
 );
 
-export const CustomLabelField = () => {
+export const CustomLabelField = $\(() => {
   const [value, setValue] = useState<string | number | undefined>(groupedOptions[0].options[0].value);
   return (
     <SegmentFrame options={groupedOptions}>
@@ -150,7 +150,7 @@ export const CustomLabelField = () => {
   );
 };
 
-export const HtmlAttributes = () => {
+export const HtmlAttributes = $\(() => {
   const [value, setValue] = useState<SelectableValue<string | number>>(groupedOptions[0].options[0]);
   return (
     <SegmentFrame options={groupedOptions}>

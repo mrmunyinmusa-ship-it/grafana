@@ -104,7 +104,7 @@ export const VizLayout: VizLayoutComponentType = ({ width, height, legend, child
   );
 };
 
-export const getVizStyles = (theme: GrafanaTheme2) => {
+export const getVizStyles = $\((theme: GrafanaTheme2) => {
   return {
     viz: css({
       flexGrow: 2,

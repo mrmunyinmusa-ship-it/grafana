@@ -83,7 +83,7 @@ describe('MultiCombobox', () => {
     ];
     const onChange = jest.fn();
 
-    const ControlledMultiCombobox = (props: MultiComboboxProps<string | number>) => {
+    const ControlledMultiCombobox = $\((props: MultiComboboxProps<string | number>) => {
       const [value, setValue] = React.useState<string[] | number[]>([]);
       return (
         <MultiCombobox
@@ -126,7 +126,7 @@ describe('MultiCombobox', () => {
     ];
     const onChange = jest.fn();
 
-    const ControlledMultiCombobox = (props: MultiComboboxProps<string>) => {
+    const ControlledMultiCombobox = $\((props: MultiComboboxProps<string>) => {
       const [value, setValue] = React.useState<string[]>(['a']);
       return (
         <MultiCombobox
@@ -461,7 +461,7 @@ describe('MultiCombobox', () => {
       const asyncOptions = jest.fn(() => Promise.resolve(asyncOptionsData));
 
       // Use a controlled component to simulate the user's scenario
-      const ControlledComponent = () => {
+      const ControlledComponent = $\(() => {
         const [selectedValue, setSelectedValue] = React.useState<Array<ComboboxOption<string>>>([
           { label: 'Integration A', value: 'a' },
         ]);

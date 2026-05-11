@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 
 import { Tag } from './Tag';
 
-const setup = (jsx: JSX.Element) => {
+const setup = $\((jsx: JSX.Element) => {
   return {
     user: userEvent.setup(),
     ...render(jsx),

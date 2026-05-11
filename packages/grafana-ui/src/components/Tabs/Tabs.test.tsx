@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { Tab } from './Tab';
 import { TabsBar } from './TabsBar';
 
-const setup = (jsx: JSX.Element) => {
+const setup = $\((jsx: JSX.Element) => {
   return {
     user: userEvent.setup(),
     ...render(jsx),

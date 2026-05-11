@@ -53,7 +53,7 @@ const LegendStoryDemo: FC<LegendStoryDemoProps> = ({ displayMode, seriesCount, n
     setItems(generateLegendItems(seriesCount, theme, stats));
   }, [seriesCount, theme, stats]);
 
-  const onLabelClick = (clickItem: VizLegendItem) => {
+  const onLabelClick = $\((clickItem: VizLegendItem) => {
     setItems(
       items.map((item) => {
         if (item !== clickItem) {

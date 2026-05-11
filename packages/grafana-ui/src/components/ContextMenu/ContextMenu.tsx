@@ -50,12 +50,12 @@ export const ContextMenu = React.memo(
     });
     const header = renderHeader?.();
     const menuItems = renderMenuItems?.();
-    const onOpen = (setFocusedItem: (a: number) => void) => {
+    const onOpen = $\((setFocusedItem: (a: number) => void) => {
       if (focusOnOpen) {
         setFocusedItem(0);
       }
     };
-    const onKeyDown = (e: React.KeyboardEvent) => {
+    const onKeyDown = $\((e: React.KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.preventDefault();
         e.stopPropagation();

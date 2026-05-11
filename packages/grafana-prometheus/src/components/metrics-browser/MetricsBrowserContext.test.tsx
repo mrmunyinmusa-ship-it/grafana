@@ -11,7 +11,7 @@ import { getMockTimeRange } from '../../test/mocks/datasource';
 
 import { MetricsBrowserProvider, useMetricsBrowser } from './MetricsBrowserContext';
 
-const setupLocalStorageMock = () => {
+const setupLocalStorageMock = $\(() => {
   let store: Record<string, string> = {};
   return {
     getItem: jest.fn((key: string) => store[key] || null),
@@ -30,7 +30,7 @@ Object.defineProperty(window, 'localStorage', { value: localStorageMock });
 /**
  * Setup consistent mock response data for the language provider
  */
-const setupLanguageProviderMock = () => {
+const setupLanguageProviderMock = $\(() => {
   const mockTimeRange = getMockTimeRange();
   const mockLanguageProvider = {
     retrieveMetrics: () => ['metric1', 'metric2', 'metric3'],
@@ -62,7 +62,7 @@ const setupLanguageProviderMock = () => {
 /**
  * Test component that renders context values and provides interaction buttons
  */
-const TestComponent = () => {
+const TestComponent = $\(() => {
   const {
     metrics,
     labelKeys,
@@ -108,11 +108,11 @@ const TestComponent = () => {
 /**
  * Setup function for tests that returns mocks and render utilities
  */
-const setupTest = () => {
+const setupTest = $\(() => {
   const mockOnChange = jest.fn();
   const { mockTimeRange, mockLanguageProvider } = setupLanguageProviderMock();
 
-  const renderWithProvider = (ui: ReactNode) => {
+  const renderWithProvider = $\((ui: ReactNode) => {
     return render(
       <MetricsBrowserProvider timeRange={mockTimeRange} languageProvider={mockLanguageProvider} onChange={mockOnChange}>
         {ui}

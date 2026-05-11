@@ -9,7 +9,7 @@ export function MenuDivider() {
   return <div className={styles.divider} />;
 }
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     divider: css({
       height: 1,

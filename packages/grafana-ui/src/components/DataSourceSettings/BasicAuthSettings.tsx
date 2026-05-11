@@ -8,10 +8,10 @@ import { SecretFormField } from '../SecretFormField/SecretFormField';
 
 import { HttpSettingsProps } from './types';
 
-export const BasicAuthSettings = ({ dataSourceConfig, onChange }: HttpSettingsProps) => {
+export const BasicAuthSettings = $\(({ dataSourceConfig, onChange }: HttpSettingsProps) => {
   const password = dataSourceConfig.secureJsonData ? dataSourceConfig.secureJsonData.basicAuthPassword : '';
 
-  const onPasswordReset = () => {
+  const onPasswordReset = $\(() => {
     onChange({
       ...dataSourceConfig,
       secureJsonData: {
@@ -25,7 +25,7 @@ export const BasicAuthSettings = ({ dataSourceConfig, onChange }: HttpSettingsPr
     });
   };
 
-  const onPasswordChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
+  const onPasswordChange = $\((event: React.SyntheticEvent<HTMLInputElement>) => {
     onChange({
       ...dataSourceConfig,
       secureJsonData: {

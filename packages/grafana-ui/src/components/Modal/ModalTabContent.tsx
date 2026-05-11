@@ -14,7 +14,7 @@ interface Props {
 }
 
 /** @internal */
-export const ModalTabContent = ({ children }: React.PropsWithChildren<Props>) => {
+export const ModalTabContent = $\(({ children }: React.PropsWithChildren<Props>) => {
   const styles = useStyles2(getStyles);
 
   return (

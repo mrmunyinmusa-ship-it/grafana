@@ -30,7 +30,7 @@ const meta: Meta<typeof CollapsableSection> = {
 export const Basic: StoryFn<typeof CollapsableSection> = ({ children, ...args }: Props) => {
   const [, updateArgs] = useArgs();
 
-  const onToggle = (isOpen: boolean) => {
+  const onToggle = $\((isOpen: boolean) => {
     action('onToggle fired')({ isOpen });
     updateArgs({ isOpen });
   };

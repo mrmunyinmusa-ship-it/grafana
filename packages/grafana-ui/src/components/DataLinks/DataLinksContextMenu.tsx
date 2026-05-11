@@ -26,7 +26,7 @@ export interface DataLinksContextMenuApi {
   targetClassName?: string;
 }
 
-export const DataLinksContextMenu = ({ children, links, style }: DataLinksContextMenuProps) => {
+export const DataLinksContextMenu = $\(({ children, links, style }: DataLinksContextMenuProps) => {
   const styles = useStyles2(getStyles);
 
   const itemsGroup: MenuItemsGroup[] = [
@@ -34,7 +34,7 @@ export const DataLinksContextMenu = ({ children, links, style }: DataLinksContex
   ];
 
   const linksCounter = itemsGroup[0].items.length;
-  const renderMenuGroupItems = () => {
+  const renderMenuGroupItems = $\(() => {
     return itemsGroup.map((group, groupIdx) => (
       <MenuGroup key={`${group.label}${groupIdx}`} label={group.label}>
         {(group.items || []).map((item, itemIdx) => (

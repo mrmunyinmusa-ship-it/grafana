@@ -20,7 +20,7 @@ export interface IconProps extends Omit<React.SVGProps<SVGElement>, 'onLoad' | '
   title?: string;
 }
 
-const getIconStyles = (theme: GrafanaTheme2) => {
+const getIconStyles = $\((theme: GrafanaTheme2) => {
   return {
     icon: css({
       display: 'inline-block',

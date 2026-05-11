@@ -9,7 +9,7 @@ import mdx from './TimeRangeInput.mdx';
 
 const now = dateTime(Date.now());
 
-const isOnRangeClear = (value: TimeRange) => {
+const isOnRangeClear = $\((value: TimeRange) => {
   return (
     !value.from.isValid() &&
     !value.to.isValid() &&

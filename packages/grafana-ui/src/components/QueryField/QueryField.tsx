@@ -240,7 +240,7 @@ export class UnThemedQueryField extends PureComponent<QueryFieldProps, QueryFiel
 
 export const QueryField = withTheme2(UnThemedQueryField);
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const focusStyles = getFocusStyles(theme);
   return {
     wrapper: css({

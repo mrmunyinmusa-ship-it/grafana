@@ -11,7 +11,7 @@ interface Props {
   item: VizTooltipItem;
   isPinned: boolean;
 }
-export const VizTooltipHeader = ({ item, isPinned }: Props) => {
+export const VizTooltipHeader = $\(({ item, isPinned }: Props) => {
   const styles = useStyles2(getStyles);
 
   const { label, value, color, colorIndicator } = item;

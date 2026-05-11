@@ -36,7 +36,7 @@ export const Text = React.forwardRef<HTMLElement, TextProps>(
   ) => {
     const styles = useStyles2(getTextStyles, element, variant, color, weight, truncate, italic, textAlignment, tabular);
 
-    const childElement = (ref: React.ForwardedRef<HTMLElement> | undefined) => {
+    const childElement = $\((ref: React.ForwardedRef<HTMLElement> | undefined) => {
       return createElement(
         element,
         {

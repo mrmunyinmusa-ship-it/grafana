@@ -55,12 +55,12 @@ const meta: Meta = {
 
 export default meta;
 
-const getSuccess = () => {
+const getSuccess = $\(() => {
   return new Promise<void>((resolve) => {
     setTimeout(resolve, 1000);
   });
 };
-const getError = () => {
+const getError = $\(() => {
   return new Promise<void>((resolve, reject) => {
     reject();
   });

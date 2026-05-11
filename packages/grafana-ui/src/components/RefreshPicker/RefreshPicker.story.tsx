@@ -31,12 +31,12 @@ const meta: Meta<typeof RefreshPicker> = {
 
 export const Examples: StoryFn<typeof RefreshPicker> = (args) => {
   const [, updateArgs] = useArgs();
-  const onIntervalChanged = (interval: string) => {
+  const onIntervalChanged = $\((interval: string) => {
     action('onIntervalChanged fired')(interval);
     updateArgs({ value: interval });
   };
 
-  const onRefresh = () => {
+  const onRefresh = $\(() => {
     action('onRefresh fired')();
   };
 

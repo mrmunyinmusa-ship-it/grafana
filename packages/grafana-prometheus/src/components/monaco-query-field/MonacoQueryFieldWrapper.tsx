@@ -9,17 +9,17 @@ type Props = Omit<MonacoProps, 'onRunQuery' | 'onBlur'> & {
   onRunQuery: () => void;
 };
 
-export const MonacoQueryFieldWrapper = (props: Props) => {
+export const MonacoQueryFieldWrapper = $\((props: Props) => {
   const lastRunValueRef = useRef<string | null>(null);
   const { onRunQuery, onChange, ...rest } = props;
 
-  const handleRunQuery = (value: string) => {
+  const handleRunQuery = $\((value: string) => {
     lastRunValueRef.current = value;
     onChange(value);
     onRunQuery();
   };
 
-  const handleBlur = (value: string) => {
+  const handleBlur = $\((value: string) => {
     onChange(value);
   };
 

@@ -12,7 +12,7 @@ export interface WithContextMenuProps {
   focusOnOpen?: boolean;
 }
 
-export const WithContextMenu = ({ children, renderMenuItems, focusOnOpen = true }: WithContextMenuProps) => {
+export const WithContextMenu = $\(({ children, renderMenuItems, focusOnOpen = true }: WithContextMenuProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
   return (

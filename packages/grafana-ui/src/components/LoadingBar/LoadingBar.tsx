@@ -32,7 +32,7 @@ export function LoadingBar({ width, delay = DEFAULT_ANIMATION_DELAY, ariaLabel =
   );
 }
 
-const getStyles = (theme: GrafanaTheme2, delay: number, duration: number) => {
+const getStyles = $\((theme: GrafanaTheme2, delay: number, duration: number) => {
   const animation = keyframes({
     '0%': {
       transform: 'translateX(-100%)',

@@ -79,7 +79,7 @@ export const FileUpload = ({
   );
 };
 
-const getStyles = (size: ComponentSize) => (theme: GrafanaTheme2) => {
+const getStyles = $\((size: ComponentSize) => (theme: GrafanaTheme2) => {
   const buttonStyles = getButtonStyles({ theme, variant: 'primary', size, iconOnly: false });
   const focusStyle = getFocusStyles(theme);
 

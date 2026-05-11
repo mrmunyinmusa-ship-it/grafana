@@ -239,7 +239,7 @@ export const AsyncOptionsWithOnlyValues: Story = {
   },
 };
 
-const noop = () => {};
+const noop = $\(() => {};
 
 export const PositioningTest: Story = {
   render: (args: PropsAndCustomArgs) => {

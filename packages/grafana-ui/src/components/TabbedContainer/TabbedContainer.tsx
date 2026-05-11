@@ -32,7 +32,7 @@ export function TabbedContainer({ tabs, defaultTab, closeIconTooltip, onClose, t
   const [activeTab, setActiveTab] = useState(tabs.some((tab) => tab.value === defaultTab) ? defaultTab : tabs[0].value);
   const styles = useStyles2(getStyles);
 
-  const onSelectTab = (item: SelectableValue<string>) => {
+  const onSelectTab = $\((item: SelectableValue<string>) => {
     setActiveTab(item.value!);
   };
 

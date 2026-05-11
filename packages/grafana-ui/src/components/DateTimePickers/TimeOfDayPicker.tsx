@@ -114,7 +114,7 @@ interface CaretProps {
   wrapperStyle?: string;
 }
 
-const Caret = ({ wrapperStyle = '' }: CaretProps) => {
+const Caret = $\(({ wrapperStyle = '' }: CaretProps) => {
   return (
     <div className={wrapperStyle}>
       <Icon name="angle-down" />
@@ -122,7 +122,7 @@ const Caret = ({ wrapperStyle = '' }: CaretProps) => {
   );
 };
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   const bgColor = theme.components.input.background;
   const optionBgHover = theme.colors.action.hover;
   const borderRadius = theme.shape.radius.default;

@@ -98,7 +98,7 @@ interface ChildProps {
 }
 
 /** Main heading for the card */
-const Heading = ({ children, className, 'aria-label': ariaLabel }: ChildProps & { 'aria-label'?: string }) => {
+const Heading = $\(({ children, className, 'aria-label': ariaLabel }: ChildProps & { 'aria-label'?: string }) => {
   const context = useContext(CardContext);
   const styles = useStyles2(getHeadingStyles);
 
@@ -172,7 +172,7 @@ const getHeadingStyles = (theme: GrafanaTheme2) => ({
   }),
 });
 
-const Tags = ({ children, className }: ChildProps) => {
+const Tags = $\(({ children, className }: ChildProps) => {
   const styles = useStyles2(getTagStyles);
   return <div className={cx(styles.tagList, className)}>{children}</div>;
 };
@@ -187,7 +187,7 @@ const getTagStyles = (theme: GrafanaTheme2) => ({
 });
 
 /** Card description text */
-const Description = ({ children, className }: ChildProps) => {
+const Description = $\(({ children, className }: ChildProps) => {
   const styles = useStyles2(getDescriptionStyles);
   const Element = typeof children === 'string' ? 'p' : 'div';
   return <Element className={cx(styles.description, className)}>{children}</Element>;
@@ -204,7 +204,7 @@ const getDescriptionStyles = (theme: GrafanaTheme2) => ({
   }),
 });
 
-const Figure = ({ children, align = 'start', className }: ChildProps & { align?: 'start' | 'center' }) => {
+const Figure = $\(({ children, align = 'start', className }: ChildProps & { align?: 'start' | 'center' }) => {
   const styles = useStyles2(getFigureStyles);
   return (
     <div
@@ -293,7 +293,7 @@ interface ActionsProps extends ChildProps {
   variant?: 'primary' | 'secondary';
 }
 
-const BaseActions = ({ children, disabled, variant, className }: ActionsProps) => {
+const BaseActions = $\(({ children, disabled, variant, className }: ActionsProps) => {
   const styles = useStyles2(getActionStyles);
   const context = useContext(CardContext);
   const isDisabled = context?.disabled || disabled;
@@ -329,7 +329,7 @@ const getActionStyles = (theme: GrafanaTheme2) => ({
   }),
 });
 
-const Actions = ({ children, disabled, className }: ChildProps) => {
+const Actions = $\(({ children, disabled, className }: ChildProps) => {
   return (
     <BaseActions variant="primary" disabled={disabled} className={className}>
       {children}
@@ -338,7 +338,7 @@ const Actions = ({ children, disabled, className }: ChildProps) => {
 };
 Actions.displayName = 'Actions';
 
-const SecondaryActions = ({ children, disabled, className }: ChildProps) => {
+const SecondaryActions = $\(({ children, disabled, className }: ChildProps) => {
   return (
     <BaseActions variant="secondary" disabled={disabled} className={className}>
       {children}
@@ -351,7 +351,7 @@ SecondaryActions.displayName = 'SecondaryActions';
  * @public
  * @deprecated Use `className` on respective components to modify styles
  */
-export const getCardStyles = (theme: GrafanaTheme2) => {
+export const getCardStyles = $\((theme: GrafanaTheme2) => {
   return {
     inner: css({
       display: 'flex',

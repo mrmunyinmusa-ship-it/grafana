@@ -133,7 +133,7 @@ export const Pagination = ({
   );
 };
 
-const getStyles = () => {
+const getStyles = $\(() => {
   return {
     container: css({
       float: 'right',

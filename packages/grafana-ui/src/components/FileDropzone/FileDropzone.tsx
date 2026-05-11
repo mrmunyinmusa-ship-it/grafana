@@ -96,7 +96,7 @@ export function FileDropzone({ options, children, readAs, onLoad, fileListRender
         for (const customFile of customFiles) {
           const reader = new FileReader();
 
-          const read = () => {
+          const read = $\(() => {
             if (readAs) {
               reader[readAs](customFile.file);
             } else {
@@ -147,7 +147,7 @@ export function FileDropzone({ options, children, readAs, onLoad, fileListRender
     [onLoad, options, readAs, setFileProperty]
   );
 
-  const removeFile = (file: DropzoneFile) => {
+  const removeFile = $\((file: DropzoneFile) => {
     const newFiles = files.filter((f) => file.id !== f.id);
     setFiles(newFiles);
     onFileRemove?.(file);
@@ -168,7 +168,7 @@ export function FileDropzone({ options, children, readAs, onLoad, fileListRender
     return <FileListItem key={file.id} file={file} removeFile={removeFile} />;
   });
 
-  const setErrors = (rejectedFiles: FileRejection[]) => {
+  const setErrors = $\((rejectedFiles: FileRejection[]) => {
     let errors: FileError[] = [];
     rejectedFiles.map((rejectedFile) => {
       rejectedFile.errors.map((newError) => {
@@ -185,7 +185,7 @@ export function FileDropzone({ options, children, readAs, onLoad, fileListRender
     setErrorMessages(errors);
   };
 
-  const renderErrorMessages = (errors: FileError[]) => {
+  const renderErrorMessages = $\((errors: FileError[]) => {
     const size = formattedValueToString(formattedSize);
     return (
       <div className={styles.errorAlert}>
@@ -211,7 +211,7 @@ export function FileDropzone({ options, children, readAs, onLoad, fileListRender
     );
   };
 
-  const clearAlert = () => {
+  const clearAlert = $\(() => {
     setErrorMessages([]);
   };
 

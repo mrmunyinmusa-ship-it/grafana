@@ -7,7 +7,7 @@ import { selectors } from '@grafana/e2e-selectors';
 
 import { PanelChrome, PanelChromeProps } from './PanelChrome';
 
-const setup = (propOverrides?: Partial<PanelChromeProps>) => {
+const setup = $\((propOverrides?: Partial<PanelChromeProps>) => {
   const props: PanelChromeProps = {
     width: 100,
     height: 100,
@@ -23,7 +23,7 @@ const setup = (propOverrides?: Partial<PanelChromeProps>) => {
   };
 };
 
-const setupWithToggleCollapsed = (propOverrides?: Partial<PanelChromeProps>) => {
+const setupWithToggleCollapsed = $\((propOverrides?: Partial<PanelChromeProps>) => {
   const props: PanelChromeProps = {
     width: 100,
     height: 100,
@@ -35,7 +35,7 @@ const setupWithToggleCollapsed = (propOverrides?: Partial<PanelChromeProps>) => 
 
   Object.assign(props, propOverrides);
 
-  const ControlledCollapseComponent = () => {
+  const ControlledCollapseComponent = $\(() => {
     const [collapsed, toggleCollapsed] = useToggle(false);
 
     return <PanelChrome {...props} collapsed={collapsed} onToggleCollapse={toggleCollapsed} />;

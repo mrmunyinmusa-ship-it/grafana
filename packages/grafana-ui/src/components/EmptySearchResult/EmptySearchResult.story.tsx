@@ -13,7 +13,7 @@ const meta: Meta<typeof EmptySearchResult> = {
   },
 };
 
-export const Basic = () => {
+export const Basic = $\(() => {
   return <EmptySearchResult>Could not find anything matching your query</EmptySearchResult>;
 };
 

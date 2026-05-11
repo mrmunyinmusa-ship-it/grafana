@@ -64,7 +64,7 @@ const getStyles = (theme: GrafanaTheme2) => ({
   }),
 });
 
-export const TypeaheadItem = (props: Props) => {
+export const TypeaheadItem = $\((props: Props) => {
   const styles = useStyles2(getStyles);
 
   const { isSelected, item, prefix, style, onMouseEnter, onMouseLeave, onClickItem } = props;

@@ -31,7 +31,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const styles = useStyles2(getStyles);
   const resetButtonStyles = useStyles2(clearButtonStyles);
 
-  const handleImageError = (path: string) => {
+  const handleImageError = $\((path: string) => {
     setImageErrors((prev) => ({
       ...prev,
       [path]: true,
@@ -43,27 +43,27 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
     setValidImages(filteredImages);
   }, [imageErrors, images]);
 
-  const openPreview = (index: number) => {
+  const openPreview = $\((index: number) => {
     setSelectedIndex(index);
   };
 
-  const closePreview = () => {
+  const closePreview = $\(() => {
     setSelectedIndex(null);
   };
 
-  const goToNext = () => {
+  const goToNext = $\(() => {
     if (selectedIndex !== null && validImages.length > 0) {
       setSelectedIndex((selectedIndex + 1) % validImages.length);
     }
   };
 
-  const goToPrevious = () => {
+  const goToPrevious = $\(() => {
     if (selectedIndex !== null && validImages.length > 0) {
       setSelectedIndex((selectedIndex - 1 + validImages.length) % validImages.length);
     }
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
+  const handleKeyDown = $\((event: React.KeyboardEvent) => {
     if (selectedIndex === null) {
       return;
     }

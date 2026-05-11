@@ -16,7 +16,7 @@ const meta: Meta<typeof InlineFieldRow> = {
   },
 };
 
-export const single = () => {
+export const single = $\(() => {
   return (
     <div style={{ width: '100%' }}>
       <InlineFieldRow>

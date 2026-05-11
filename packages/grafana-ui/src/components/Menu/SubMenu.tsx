@@ -64,7 +64,7 @@ export const SubMenu = memo(({ items, isOpen, close, customStyle }: SubMenuProps
 SubMenu.displayName = 'SubMenu';
 
 /** @internal */
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     iconWrapper: css({
       display: 'flex',

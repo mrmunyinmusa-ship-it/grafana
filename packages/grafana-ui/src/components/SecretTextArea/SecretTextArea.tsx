@@ -19,7 +19,7 @@ export type Props = React.ComponentProps<typeof TextArea> & {
 export const CONFIGURED_TEXT = 'configured';
 export const RESET_BUTTON_TEXT = 'Reset';
 
-const getStyles = (theme: GrafanaTheme2) => {
+const getStyles = $\((theme: GrafanaTheme2) => {
   return {
     configuredStyle: css({
       minHeight: theme.spacing(theme.components.height.md),
@@ -33,7 +33,7 @@ const getStyles = (theme: GrafanaTheme2) => {
  * Text area that does not disclose an already configured value but lets the user reset the current value and enter a new one.
  * Typically useful for asymmetric cryptography keys.
  */
-export const SecretTextArea = ({ isConfigured, onReset, ...props }: Props) => {
+export const SecretTextArea = $\(({ isConfigured, onReset, ...props }: Props) => {
   const styles = useStyles2(getStyles);
   return (
     <Stack>

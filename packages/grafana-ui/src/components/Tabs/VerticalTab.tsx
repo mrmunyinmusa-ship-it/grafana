@@ -43,7 +43,7 @@ export const VerticalTab = forwardRef<HTMLAnchorElement, TabProps>(
 
 VerticalTab.displayName = 'Tab';
 
-const getTabStyles = (theme: GrafanaTheme2) => {
+const getTabStyles = $\((theme: GrafanaTheme2) => {
   return {
     link: css({
       padding: '6px 12px',

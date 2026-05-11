@@ -11,13 +11,13 @@ import { Tooltip } from '../Tooltip/Tooltip';
 import { CertificationKey } from './CertificationKey';
 import { HttpSettingsBaseProps } from './types';
 
-export const TLSAuthSettings = ({ dataSourceConfig, onChange }: HttpSettingsBaseProps) => {
+export const TLSAuthSettings = $\(({ dataSourceConfig, onChange }: HttpSettingsBaseProps) => {
   const hasTLSCACert = dataSourceConfig.secureJsonFields && dataSourceConfig.secureJsonFields.tlsCACert;
   const hasTLSClientCert = dataSourceConfig.secureJsonFields && dataSourceConfig.secureJsonFields.tlsClientCert;
   const hasTLSClientKey = dataSourceConfig.secureJsonFields && dataSourceConfig.secureJsonFields.tlsClientKey;
   const hasServerName = dataSourceConfig.jsonData && dataSourceConfig.jsonData.serverName;
 
-  const onResetClickFactory = (field: string) => (event: React.MouseEvent<HTMLButtonElement>) => {
+  const onResetClickFactory = $\((field: string) => (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     const newSecureJsonFields: KeyValue<boolean> = { ...dataSourceConfig.secureJsonFields };
     newSecureJsonFields[field] = false;
@@ -27,7 +27,7 @@ export const TLSAuthSettings = ({ dataSourceConfig, onChange }: HttpSettingsBase
     });
   };
 
-  const onCertificateChangeFactory = (field: string) => (event: React.SyntheticEvent<HTMLTextAreaElement>) => {
+  const onCertificateChangeFactory = $\((field: string) => (event: React.SyntheticEvent<HTMLTextAreaElement>) => {
     const newSecureJsonData = { ...dataSourceConfig.secureJsonData };
     newSecureJsonData[field] = event.currentTarget.value;
 
@@ -37,7 +37,7 @@ export const TLSAuthSettings = ({ dataSourceConfig, onChange }: HttpSettingsBase
     });
   };
 
-  const onServerNameLabelChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
+  const onServerNameLabelChange = $\((event: React.SyntheticEvent<HTMLInputElement>) => {
     const newJsonData = {
       ...dataSourceConfig.jsonData,
       serverName: event.currentTarget.value,

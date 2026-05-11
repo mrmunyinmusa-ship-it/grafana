@@ -10,7 +10,7 @@ import type { ReactMonacoEditorProps } from './types';
 // pass the monaco editor to the loader to bypass requirejs
 monacoEditorLoader.config({ monaco });
 
-export const ReactMonacoEditor = (props: ReactMonacoEditorProps) => {
+export const ReactMonacoEditor = $\((props: ReactMonacoEditorProps) => {
   const { beforeMount, onMount, options, ...restProps } = props;
 
   const theme = useTheme2();
