@@ -685,7 +685,7 @@ func TestSocialGitlab_Reload(t *testing.T) {
 			name: "SSO provider successfully updated",
 			info: &social.OAuthInfo{
 				ClientId:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			settings: ssoModels.SSOSettings{
 				Settings: map[string]any{
@@ -698,13 +698,13 @@ func TestSocialGitlab_Reload(t *testing.T) {
 			expectError: false,
 			expectedInfo: &social.OAuthInfo{
 				ClientId:     "new-client-id",
-				ClientSecret: "new-client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				AuthUrl:      "some-new-url",
 				LoginPrompt:  "login",
 			},
 			expectedConfig: &oauth2.Config{
 				ClientID:     "new-client-id",
-				ClientSecret: "new-client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				Endpoint: oauth2.Endpoint{
 					AuthURL: "some-new-url",
 				},
@@ -715,7 +715,7 @@ func TestSocialGitlab_Reload(t *testing.T) {
 			name: "fails if settings contain invalid values",
 			info: &social.OAuthInfo{
 				ClientId:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			settings: ssoModels.SSOSettings{
 				Settings: map[string]any{
@@ -727,11 +727,11 @@ func TestSocialGitlab_Reload(t *testing.T) {
 			expectError: true,
 			expectedInfo: &social.OAuthInfo{
 				ClientId:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			expectedConfig: &oauth2.Config{
 				ClientID:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				RedirectURL:  "/login/gitlab",
 			},
 		},

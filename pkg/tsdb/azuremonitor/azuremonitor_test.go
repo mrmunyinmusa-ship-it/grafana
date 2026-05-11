@@ -111,7 +111,7 @@ func TestNewInstanceSettings(t *testing.T) {
 			expectedModel: &types.DatasourceInfo{
 				Credentials: &azcredentials.AzureClientSecretCredentials{
 					AzureCloud:   "AzureCustomizedCloud",
-					ClientSecret: "secret",
+					ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				},
 				Settings: types.AzureMonitorSettings{},
 				Routes: map[string]types.AzRoute{

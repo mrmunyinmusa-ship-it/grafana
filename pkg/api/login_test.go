@@ -94,7 +94,7 @@ type redirectCase struct {
 var oAuthInfos = map[string]*social.OAuthInfo{
 	"github": {
 		ClientId:     "fake",
-		ClientSecret: "fakefake",
+		ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 		Enabled:      true,
 		AllowSignup:  true,
 		Name:         "github",
@@ -485,7 +485,7 @@ func TestLoginOAuthRedirect(t *testing.T) {
 	mock := &mockSocialService{
 		oAuthInfo: &social.OAuthInfo{
 			ClientId:     "fake",
-			ClientSecret: "fakefake",
+			ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			Enabled:      true,
 			AllowSignup:  true,
 			Name:         "github",
@@ -572,7 +572,7 @@ func TestAuthProxyLoginWithEnableLoginTokenAndEnabledOauthAutoLogin(t *testing.T
 	mock := &mockSocialService{
 		oAuthInfo: &social.OAuthInfo{
 			ClientId:     "fake",
-			ClientSecret: "fakefake",
+			ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			Enabled:      true,
 			AllowSignup:  true,
 			Name:         "github",

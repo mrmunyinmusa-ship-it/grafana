@@ -491,7 +491,7 @@ func TestRequestConfigProvider_PluginRequestConfig_appClientSecret(t *testing.T)
 
 		p := NewRequestConfigProvider(pCfg)
 		require.Subset(t, p.PluginRequestConfig(context.Background(), "", &auth.ExternalService{
-			ClientSecret: "mysecret",
-		}), map[string]string{backend.AppClientSecret: "mysecret"})
+			ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
+		}), map[string]string{backend.AppClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET")})
 	})
 }

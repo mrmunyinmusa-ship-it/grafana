@@ -15,7 +15,7 @@ import (
 func TestTimeLimitCodes(t *testing.T) {
 	cfg := setting.NewCfg()
 	cfg.EmailCodeValidMinutes = 120
-	user := &user.User{ID: 10, Email: "t@a.com", Login: "asd", Password: "1", Rands: "2"}
+	user := &user.User{ID: 10, Email: "t@a.com", Login: "asd", Password: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD")}
 
 	format := "200601021504"
 	mailPayload := strconv.FormatInt(user.ID, 10) + user.Email + user.Login + string(user.Password) + user.Rands
@@ -125,7 +125,7 @@ func TestEmailCodes(t *testing.T) {
 		cfg := setting.NewCfg()
 		cfg.EmailCodeValidMinutes = 120
 
-		user := &user.User{ID: 10, Email: "t@a.com", Login: "asd", Password: "1", Rands: "2"}
+		user := &user.User{ID: 10, Email: "t@a.com", Login: "asd", Password: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD")}
 		code, err := createUserEmailCode(cfg, user, "")
 		require.NoError(t, err)
 

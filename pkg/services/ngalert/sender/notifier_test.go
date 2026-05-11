@@ -167,7 +167,7 @@ func TestHandlerSendAll(t *testing.T) {
 		config_util.HTTPClientConfig{
 			BasicAuth: &config_util.BasicAuth{
 				Username: "prometheus",
-				Password: "testing_password",
+				Password: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 			},
 		}, "auth_alertmanager")
 

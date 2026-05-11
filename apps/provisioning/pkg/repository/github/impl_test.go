@@ -638,7 +638,7 @@ func TestGithubClient_CreateWebhook(t *testing.T) {
 				Events: []string{"push"},
 				Active: true,
 				URL:    "https://example.com/webhook",
-				Secret: "secret123",
+				Secret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				// ContentType intentionally omitted
 			},
 			want: WebhookConfig{

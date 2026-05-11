@@ -21,7 +21,7 @@ func TestPluginMetricsEndpoint(t *testing.T) {
 			Cfg: &setting.Cfg{
 				MetricsEndpointEnabled:           true,
 				MetricsEndpointBasicAuthUsername: "",
-				MetricsEndpointBasicAuthPassword: "",
+				MetricsEndpointBasicAuthPassword: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 			},
 			pluginClient: &fakePluginClientMetrics{
 				store: map[string][]byte{
@@ -75,7 +75,7 @@ func TestPluginMetricsEndpoint(t *testing.T) {
 			Cfg: &setting.Cfg{
 				MetricsEndpointEnabled:           true,
 				MetricsEndpointBasicAuthUsername: "user",
-				MetricsEndpointBasicAuthPassword: "pwd",
+				MetricsEndpointBasicAuthPassword: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 			},
 			pluginClient: &fakePluginClientMetrics{
 				store: map[string][]byte{

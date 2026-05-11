@@ -336,7 +336,7 @@ func TestIntegrationUserDataAccess(t *testing.T) {
 			Email:    "password@test.com",
 			Name:     "password",
 			Login:    "password",
-			Password: "password",
+			Password: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 			Salt:     "salt",
 			Created:  time.Now(),
 			Updated:  time.Now(),

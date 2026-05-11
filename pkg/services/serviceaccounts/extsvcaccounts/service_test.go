@@ -263,7 +263,7 @@ func TestExtSvcAccountsService_SaveExternalService(t *testing.T) {
 			want: &extsvcauth.ExternalService{
 				Name:   extSvcSlug,
 				ID:     extSvcSlug,
-				Secret: "not empty",
+				Secret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			wantErr: false,
 		},
@@ -327,7 +327,7 @@ func TestExtSvcAccountsService_SaveExternalService(t *testing.T) {
 			want: &extsvcauth.ExternalService{
 				Name:   extSvcSlug,
 				ID:     extSvcSlug,
-				Secret: "not empty",
+				Secret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			wantErr: false,
 		},
@@ -359,7 +359,7 @@ func TestExtSvcAccountsService_SaveExternalService(t *testing.T) {
 			want: &extsvcauth.ExternalService{
 				Name:   extSvcSlug,
 				ID:     extSvcSlug,
-				Secret: "not empty",
+				Secret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			wantErr: false,
 		},
@@ -404,7 +404,7 @@ func TestExtSvcAccountsService_SaveExternalService(t *testing.T) {
 			want: &extsvcauth.ExternalService{
 				Name:   extSvcSlug,
 				ID:     extSvcSlug,
-				Secret: "not empty",
+				Secret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			wantErr: false,
 		},

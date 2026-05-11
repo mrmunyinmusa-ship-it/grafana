@@ -55,7 +55,7 @@ func NewMimirClient(mimirURL, tenantID string) (client.MimirClient, error) {
 	cfg := &client.Config{
 		URL:      u,
 		TenantID: tenantID,
-		Password: "", // No password needed for test
+		Password: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"), // No password needed for test
 		Logger:   log.NewNopLogger(),
 	}
 

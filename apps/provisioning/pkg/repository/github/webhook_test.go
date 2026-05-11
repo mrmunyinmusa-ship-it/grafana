@@ -1001,7 +1001,7 @@ func TestGitHubRepository_OnCreate(t *testing.T) {
 				})).Return(WebhookConfig{
 					ID:     123,
 					URL:    "https://example.com/webhook",
-					Secret: "test-secret",
+					Secret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				}, nil)
 			},
 			config: &provisioning.Repository{

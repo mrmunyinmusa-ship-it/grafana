@@ -609,7 +609,7 @@ func TestServer_AdminBind(t *testing.T) {
 		server := &Server{
 			Connection: connection,
 			Config: &ServerConfig{
-				BindPassword: "pwd",
+				BindPassword: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 				BindDN:       dn,
 			},
 		}
@@ -635,7 +635,7 @@ func TestServer_AdminBind(t *testing.T) {
 		server := &Server{
 			Connection: connection,
 			Config: &ServerConfig{
-				BindPassword: "pwd",
+				BindPassword: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 				BindDN:       dn,
 			},
 			log: log.New("test-logger"),

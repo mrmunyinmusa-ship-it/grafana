@@ -264,7 +264,7 @@ func TestServer_binds(t *testing.T) {
 	t.Run("admin user bind", func(t *testing.T) {
 		server := &Server{
 			Config: &ServerConfig{
-				BindPassword: "test",
+				BindPassword: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 			},
 		}
 
@@ -274,7 +274,7 @@ func TestServer_binds(t *testing.T) {
 	t.Run("don't admin user bind", func(t *testing.T) {
 		server := &Server{
 			Config: &ServerConfig{
-				BindPassword: "",
+				BindPassword: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 			},
 		}
 

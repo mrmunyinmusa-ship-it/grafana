@@ -108,7 +108,7 @@ func convertToK8sResource(
 }
 
 var permissionMapper = map[ngmodels.ReceiverPermission]string{
-	ngmodels.ReceiverPermissionReadSecret: "canReadSecrets",
+	ngmodels.ReceiverPermissionReadSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 	ngmodels.ReceiverPermissionAdmin:      "canAdmin",
 	ngmodels.ReceiverPermissionWrite:      "canWrite",
 	ngmodels.ReceiverPermissionDelete:     "canDelete",

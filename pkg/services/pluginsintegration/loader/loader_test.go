@@ -546,7 +546,7 @@ func TestLoader_Load_ExternalRegistration(t *testing.T) {
 				BaseURL:   "public/plugins/grafana-test-datasource",
 				ExternalService: &auth.ExternalService{
 					ClientID:     "client-id",
-					ClientSecret: "secretz",
+					ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				},
 				Translations: map[string]string{},
 			},
@@ -564,7 +564,7 @@ func TestLoader_Load_ExternalRegistration(t *testing.T) {
 			authServiceRegistry: &fakes.FakeAuthService{
 				Result: &auth.ExternalService{
 					ClientID:     "client-id",
-					ClientSecret: "secretz",
+					ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				},
 			},
 			backendFactoryProvider: backendFactoryProvider,

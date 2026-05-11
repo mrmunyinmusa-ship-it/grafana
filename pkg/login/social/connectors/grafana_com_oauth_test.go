@@ -240,7 +240,7 @@ func TestSocialGrafanaCom_Reload(t *testing.T) {
 			name: "SSO provider successfully updated",
 			info: &social.OAuthInfo{
 				ClientId:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			settings: ssoModels.SSOSettings{
 				Settings: map[string]any{
@@ -252,7 +252,7 @@ func TestSocialGrafanaCom_Reload(t *testing.T) {
 			expectError: false,
 			expectedInfo: &social.OAuthInfo{
 				ClientId:     "new-client-id",
-				ClientSecret: "new-client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				Name:         "a-new-name",
 				AuthUrl:      GrafanaComURL + "/oauth2/authorize",
 				TokenUrl:     GrafanaComURL + "/api/oauth2/token",
@@ -260,7 +260,7 @@ func TestSocialGrafanaCom_Reload(t *testing.T) {
 			},
 			expectedConfig: &oauth2.Config{
 				ClientID:     "new-client-id",
-				ClientSecret: "new-client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				Endpoint: oauth2.Endpoint{
 					AuthURL:   GrafanaComURL + "/oauth2/authorize",
 					TokenURL:  GrafanaComURL + "/api/oauth2/token",
@@ -273,7 +273,7 @@ func TestSocialGrafanaCom_Reload(t *testing.T) {
 			name: "fails if settings contain invalid values",
 			info: &social.OAuthInfo{
 				ClientId:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 			},
 			settings: ssoModels.SSOSettings{
 				Settings: map[string]any{
@@ -285,7 +285,7 @@ func TestSocialGrafanaCom_Reload(t *testing.T) {
 			expectError: true,
 			expectedInfo: &social.OAuthInfo{
 				ClientId:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				// these are the overwrites from the constructor
 				AuthUrl:   GrafanaComURL + "/oauth2/authorize",
 				TokenUrl:  GrafanaComURL + "/api/oauth2/token",
@@ -293,7 +293,7 @@ func TestSocialGrafanaCom_Reload(t *testing.T) {
 			},
 			expectedConfig: &oauth2.Config{
 				ClientID:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				Endpoint: oauth2.Endpoint{
 					AuthURL:   GrafanaComURL + "/oauth2/authorize",
 					TokenURL:  GrafanaComURL + "/api/oauth2/token",
@@ -340,7 +340,7 @@ func TestSocialGrafanaCom_Reload_ExtraFields(t *testing.T) {
 			name: "successfully reloads the allowed organizations when they are set in the settings",
 			info: &social.OAuthInfo{
 				ClientId:     "client-id",
-				ClientSecret: "client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				Extra: map[string]string{
 					"allowed_organizations": "previous",
 				},
@@ -352,7 +352,7 @@ func TestSocialGrafanaCom_Reload_ExtraFields(t *testing.T) {
 			},
 			expectedInfo: &social.OAuthInfo{
 				ClientId:     "new-client-id",
-				ClientSecret: "new-client-secret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				Name:         "a-new-name",
 				AuthUrl:      GrafanaComURL + "/oauth2/authorize",
 				TokenUrl:     GrafanaComURL + "/api/oauth2/token",

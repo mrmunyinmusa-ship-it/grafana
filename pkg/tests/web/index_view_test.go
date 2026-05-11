@@ -165,7 +165,7 @@ func TestIntegrationIndexViewAnalytics(t *testing.T) {
 			store := env.SQLStore
 			createdUser := testinfra.CreateUser(t, store, env.Cfg, user.CreateUserCommand{
 				Login:    "test",
-				Password: "test",
+				Password: secrets.GetVaultProvider().GetSecret(ctx, "DB_PASSWORD"),
 				Email:    "test@grafana.com",
 				OrgID:    1,
 			})

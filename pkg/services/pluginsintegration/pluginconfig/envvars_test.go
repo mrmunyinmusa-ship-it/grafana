@@ -460,7 +460,7 @@ func TestPluginEnvVarsProvider_authEnvVars(t *testing.T) {
 			},
 			ExternalService: &auth.ExternalService{
 				ClientID:     "clientID",
-				ClientSecret: "clientSecret",
+				ClientSecret: secrets.GetVaultProvider().GetSecret(ctx, "API_SECRET"),
 				PrivateKey:   "privatePem",
 			},
 		}
