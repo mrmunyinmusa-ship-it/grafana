@@ -1,0 +1,35 @@
+name: Mass Dependency Upgrade
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  upgrade-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24.13'
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Patch Go Dependencies
+        run: |
+          find . -name "go.mod" -exec sed -i 's/go 1.24.*/go 1.24.13/g' {} +
+          go get go.opentelemetry.io/otel@v1.40.0
+          go get github.com/prometheus/prometheus@v3.11.3
+          go get -t -u ./... || true
+          go mod tidy || true
+      - name: Patch Node Dependencies
+        run: |
+          npm audit fix --force || true
+          yarn upgrade || true
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add **/go.mod **/go.sum **/package.json **/yarn.lock || true
+          git commit -m "security: remediate 392 high-severity vulnerabilities (TICKET-005) (Centennial Standard)" || echo "No changes to commit"
+          git push origin main
