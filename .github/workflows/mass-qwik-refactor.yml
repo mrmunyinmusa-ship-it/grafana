@@ -1,0 +1,22 @@
+name: Mass Qwik Refactor
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  refactor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run Mass Regex Replacement
+        run: npx replace-in-file "/const (\w+) = \((.*?)\) => \{/g" "const \$1 = \$\((\$2) => {" packages/grafana-ui/src/components/**/*.tsx packages/grafana-prometheus/src/components/**/*.tsx --isRegex
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add packages/
+          git commit -m "refactor: automate qwik serialization wrappers for core ui components (Centennial Standard)" || echo "No changes to commit"
+          git push origin main
